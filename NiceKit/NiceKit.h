@@ -17,4 +17,3 @@ FOUNDATION_EXPORT const unsigned char NiceKitVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <NiceKit/PublicHeader.h>
 
 
-#import <NiceKit/NSString+Additions.h>
