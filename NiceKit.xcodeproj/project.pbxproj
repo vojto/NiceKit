@@ -68,7 +68,7 @@
 		990A23711EAF409600DCE839 /* XView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A234C1EAF409600DCE839 /* XView+Additions.swift */; };
 		990A23721EAF409600DCE839 /* XView+Rendering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A234D1EAF409600DCE839 /* XView+Rendering.swift */; };
 		990A23751EAF40A200DCE839 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 990A23731EAF40A200DCE839 /* NSString+Additions.m */; };
-		990A23761EAF40A200DCE839 /* NSString+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 990A23741EAF40A200DCE839 /* NSString+Additions.h */; };
+		990A23761EAF40A200DCE839 /* NSString+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 990A23741EAF40A200DCE839 /* NSString+Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		990A23781EAF410600DCE839 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 990A23771EAF410600DCE839 /* Cartography.framework */; };
 		990A237A1EAF417100DCE839 /* SwiftHexColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23791EAF417100DCE839 /* SwiftHexColors.swift */; };
 /* End PBXBuildFile section */
