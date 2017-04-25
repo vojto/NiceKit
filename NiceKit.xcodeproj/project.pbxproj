@@ -8,12 +8,138 @@
 
 /* Begin PBXBuildFile section */
 		990A22F41EAF406200DCE839 /* NiceKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 990A22F21EAF406200DCE839 /* NiceKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		990A230E1EAF407300DCE839 /* NKCustomButton.Mac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A22FB1EAF407300DCE839 /* NKCustomButton.Mac.swift */; };
+		990A230F1EAF407300DCE839 /* NKButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A22FC1EAF407300DCE839 /* NKButton.swift */; };
+		990A23101EAF407300DCE839 /* NKCheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A22FD1EAF407300DCE839 /* NKCheckbox.swift */; };
+		990A23111EAF407300DCE839 /* NKLabel.Mac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A22FE1EAF407300DCE839 /* NKLabel.Mac.swift */; };
+		990A23121EAF407300DCE839 /* NKTableBuilder.Mac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A22FF1EAF407300DCE839 /* NKTableBuilder.Mac.swift */; };
+		990A23131EAF407300DCE839 /* NKTableCellView.Mac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23001EAF407300DCE839 /* NKTableCellView.Mac.swift */; };
+		990A23141EAF407300DCE839 /* NKTableView.Mac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23011EAF407300DCE839 /* NKTableView.Mac.swift */; };
+		990A23151EAF407300DCE839 /* NKTextArea.Mac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23021EAF407300DCE839 /* NKTextArea.Mac.swift */; };
+		990A23161EAF407300DCE839 /* NKTextField.Mac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23031EAF407300DCE839 /* NKTextField.Mac.swift */; };
+		990A23171EAF407300DCE839 /* NKTransition.Mac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23041EAF407300DCE839 /* NKTransition.Mac.swift */; };
+		990A23181EAF407300DCE839 /* NKView.Mac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23051EAF407300DCE839 /* NKView.Mac.swift */; };
+		990A23191EAF407300DCE839 /* NKWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23061EAF407300DCE839 /* NKWindow.swift */; };
+		990A231A1EAF407300DCE839 /* NSAffineTransform+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23071EAF407300DCE839 /* NSAffineTransform+Additions.swift */; };
+		990A231B1EAF407300DCE839 /* NSTextField+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23081EAF407300DCE839 /* NSTextField+Additions.swift */; };
+		990A231C1EAF407300DCE839 /* NSSegmentedControl+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23091EAF407300DCE839 /* NSSegmentedControl+Additions.swift */; };
+		990A231D1EAF407300DCE839 /* NSPopUpButton+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A230A1EAF407300DCE839 /* NSPopUpButton+Additions.swift */; };
+		990A231E1EAF407300DCE839 /* NSUserNotification+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A230B1EAF407300DCE839 /* NSUserNotification+Additions.swift */; };
+		990A231F1EAF407300DCE839 /* NKSimpleTable.Mac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A230C1EAF407300DCE839 /* NKSimpleTable.Mac.swift */; };
+		990A23201EAF407300DCE839 /* XApplication+Additions.Mac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A230D1EAF407300DCE839 /* XApplication+Additions.Mac.swift */; };
+		990A23251EAF408700DCE839 /* NSNotificationCenter+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23221EAF408700DCE839 /* NSNotificationCenter+Additions.swift */; };
+		990A23261EAF408700DCE839 /* NSTimer+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23231EAF408700DCE839 /* NSTimer+Additions.swift */; };
+		990A23271EAF408700DCE839 /* NSUserDefaults+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23241EAF408700DCE839 /* NSUserDefaults+Additions.swift */; };
+		990A234E1EAF409600DCE839 /* CAAnimation+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23291EAF409600DCE839 /* CAAnimation+Additions.swift */; };
+		990A234F1EAF409600DCE839 /* CAAnimationGroup+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A232A1EAF409600DCE839 /* CAAnimationGroup+Additions.swift */; };
+		990A23501EAF409600DCE839 /* CALayer+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A232B1EAF409600DCE839 /* CALayer+Additions.swift */; };
+		990A23511EAF409600DCE839 /* NiceKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A232C1EAF409600DCE839 /* NiceKit.swift */; };
+		990A23521EAF409600DCE839 /* NKBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A232D1EAF409600DCE839 /* NKBezierPath.swift */; };
+		990A23531EAF409600DCE839 /* NKBezierPathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A232E1EAF409600DCE839 /* NKBezierPathView.swift */; };
+		990A23541EAF409600DCE839 /* NKColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A232F1EAF409600DCE839 /* NKColor.swift */; };
+		990A23551EAF409600DCE839 /* NKDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23301EAF409600DCE839 /* NKDrawing.swift */; };
+		990A23561EAF409600DCE839 /* NKFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23311EAF409600DCE839 /* NKFieldType.swift */; };
+		990A23571EAF409600DCE839 /* NKGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23321EAF409600DCE839 /* NKGradient.swift */; };
+		990A23581EAF409600DCE839 /* NKMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23331EAF409600DCE839 /* NKMenu.swift */; };
+		990A23591EAF409600DCE839 /* NKPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23341EAF409600DCE839 /* NKPadding.swift */; };
+		990A235A1EAF409600DCE839 /* NKPlatformsIntegration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23351EAF409600DCE839 /* NKPlatformsIntegration.swift */; };
+		990A235B1EAF409600DCE839 /* NKSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23361EAF409600DCE839 /* NKSlider.swift */; };
+		990A235C1EAF409600DCE839 /* NKSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23371EAF409600DCE839 /* NKSound.swift */; };
+		990A235D1EAF409600DCE839 /* NKStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23381EAF409600DCE839 /* NKStyle.swift */; };
+		990A235E1EAF409600DCE839 /* NKStylesheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23391EAF409600DCE839 /* NKStylesheet.swift */; };
+		990A235F1EAF409600DCE839 /* NKTableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A233A1EAF409600DCE839 /* NKTableItem.swift */; };
+		990A23601EAF409600DCE839 /* NKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A233B1EAF409600DCE839 /* NKView.swift */; };
+		990A23611EAF409600DCE839 /* NKViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A233C1EAF409600DCE839 /* NKViewable.swift */; };
+		990A23621EAF409600DCE839 /* NKViewable+Implementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A233D1EAF409600DCE839 /* NKViewable+Implementation.swift */; };
+		990A23631EAF409600DCE839 /* NSBezierPath+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A233E1EAF409600DCE839 /* NSBezierPath+Additions.swift */; };
+		990A23641EAF409600DCE839 /* NSDate+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A233F1EAF409600DCE839 /* NSDate+Additions.swift */; };
+		990A23651EAF409600DCE839 /* NSFont+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23401EAF409600DCE839 /* NSFont+Additions.swift */; };
+		990A23661EAF409600DCE839 /* NSImage+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23411EAF409600DCE839 /* NSImage+Additions.swift */; };
+		990A23671EAF409600DCE839 /* NSMutableAttributedString+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23421EAF409600DCE839 /* NSMutableAttributedString+Additions.swift */; };
+		990A23681EAF409600DCE839 /* NSObject+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23431EAF409600DCE839 /* NSObject+Additions.swift */; };
+		990A23691EAF409600DCE839 /* NSRect+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23441EAF409600DCE839 /* NSRect+Additions.swift */; };
+		990A236A1EAF409600DCE839 /* NSView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23451EAF409600DCE839 /* NSView+Layout.swift */; };
+		990A236B1EAF409600DCE839 /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23461EAF409600DCE839 /* String+Additions.swift */; };
+		990A236C1EAF409600DCE839 /* String+UIAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23471EAF409600DCE839 /* String+UIAdditions.swift */; };
+		990A236D1EAF409600DCE839 /* SwiftAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23481EAF409600DCE839 /* SwiftAdditions.swift */; };
+		990A236E1EAF409600DCE839 /* XButton+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23491EAF409600DCE839 /* XButton+Additions.swift */; };
+		990A236F1EAF409600DCE839 /* XScreen+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A234A1EAF409600DCE839 /* XScreen+Additions.swift */; };
+		990A23701EAF409600DCE839 /* XTextField+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A234B1EAF409600DCE839 /* XTextField+Additions.swift */; };
+		990A23711EAF409600DCE839 /* XView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A234C1EAF409600DCE839 /* XView+Additions.swift */; };
+		990A23721EAF409600DCE839 /* XView+Rendering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A234D1EAF409600DCE839 /* XView+Rendering.swift */; };
+		990A23751EAF40A200DCE839 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 990A23731EAF40A200DCE839 /* NSString+Additions.m */; };
+		990A23761EAF40A200DCE839 /* NSString+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 990A23741EAF40A200DCE839 /* NSString+Additions.h */; };
+		990A23781EAF410600DCE839 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 990A23771EAF410600DCE839 /* Cartography.framework */; };
+		990A237A1EAF417100DCE839 /* SwiftHexColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23791EAF417100DCE839 /* SwiftHexColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		990A22EF1EAF406200DCE839 /* NiceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NiceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		990A22F21EAF406200DCE839 /* NiceKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NiceKit.h; sourceTree = "<group>"; };
 		990A22F31EAF406200DCE839 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		990A22FB1EAF407300DCE839 /* NKCustomButton.Mac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKCustomButton.Mac.swift; sourceTree = "<group>"; };
+		990A22FC1EAF407300DCE839 /* NKButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKButton.swift; sourceTree = "<group>"; };
+		990A22FD1EAF407300DCE839 /* NKCheckbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKCheckbox.swift; sourceTree = "<group>"; };
+		990A22FE1EAF407300DCE839 /* NKLabel.Mac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKLabel.Mac.swift; sourceTree = "<group>"; };
+		990A22FF1EAF407300DCE839 /* NKTableBuilder.Mac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKTableBuilder.Mac.swift; sourceTree = "<group>"; };
+		990A23001EAF407300DCE839 /* NKTableCellView.Mac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKTableCellView.Mac.swift; sourceTree = "<group>"; };
+		990A23011EAF407300DCE839 /* NKTableView.Mac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKTableView.Mac.swift; sourceTree = "<group>"; };
+		990A23021EAF407300DCE839 /* NKTextArea.Mac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKTextArea.Mac.swift; sourceTree = "<group>"; };
+		990A23031EAF407300DCE839 /* NKTextField.Mac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKTextField.Mac.swift; sourceTree = "<group>"; };
+		990A23041EAF407300DCE839 /* NKTransition.Mac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKTransition.Mac.swift; sourceTree = "<group>"; };
+		990A23051EAF407300DCE839 /* NKView.Mac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKView.Mac.swift; sourceTree = "<group>"; };
+		990A23061EAF407300DCE839 /* NKWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKWindow.swift; sourceTree = "<group>"; };
+		990A23071EAF407300DCE839 /* NSAffineTransform+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAffineTransform+Additions.swift"; sourceTree = "<group>"; };
+		990A23081EAF407300DCE839 /* NSTextField+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextField+Additions.swift"; sourceTree = "<group>"; };
+		990A23091EAF407300DCE839 /* NSSegmentedControl+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSSegmentedControl+Additions.swift"; sourceTree = "<group>"; };
+		990A230A1EAF407300DCE839 /* NSPopUpButton+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSPopUpButton+Additions.swift"; sourceTree = "<group>"; };
+		990A230B1EAF407300DCE839 /* NSUserNotification+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSUserNotification+Additions.swift"; sourceTree = "<group>"; };
+		990A230C1EAF407300DCE839 /* NKSimpleTable.Mac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKSimpleTable.Mac.swift; sourceTree = "<group>"; };
+		990A230D1EAF407300DCE839 /* XApplication+Additions.Mac.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XApplication+Additions.Mac.swift"; sourceTree = "<group>"; };
+		990A23221EAF408700DCE839 /* NSNotificationCenter+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotificationCenter+Additions.swift"; sourceTree = "<group>"; };
+		990A23231EAF408700DCE839 /* NSTimer+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimer+Additions.swift"; sourceTree = "<group>"; };
+		990A23241EAF408700DCE839 /* NSUserDefaults+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSUserDefaults+Additions.swift"; sourceTree = "<group>"; };
+		990A23291EAF409600DCE839 /* CAAnimation+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAAnimation+Additions.swift"; sourceTree = "<group>"; };
+		990A232A1EAF409600DCE839 /* CAAnimationGroup+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAAnimationGroup+Additions.swift"; sourceTree = "<group>"; };
+		990A232B1EAF409600DCE839 /* CALayer+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CALayer+Additions.swift"; sourceTree = "<group>"; };
+		990A232C1EAF409600DCE839 /* NiceKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NiceKit.swift; sourceTree = "<group>"; };
+		990A232D1EAF409600DCE839 /* NKBezierPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKBezierPath.swift; sourceTree = "<group>"; };
+		990A232E1EAF409600DCE839 /* NKBezierPathView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKBezierPathView.swift; sourceTree = "<group>"; };
+		990A232F1EAF409600DCE839 /* NKColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKColor.swift; sourceTree = "<group>"; };
+		990A23301EAF409600DCE839 /* NKDrawing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKDrawing.swift; sourceTree = "<group>"; };
+		990A23311EAF409600DCE839 /* NKFieldType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKFieldType.swift; sourceTree = "<group>"; };
+		990A23321EAF409600DCE839 /* NKGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKGradient.swift; sourceTree = "<group>"; };
+		990A23331EAF409600DCE839 /* NKMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKMenu.swift; sourceTree = "<group>"; };
+		990A23341EAF409600DCE839 /* NKPadding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKPadding.swift; sourceTree = "<group>"; };
+		990A23351EAF409600DCE839 /* NKPlatformsIntegration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKPlatformsIntegration.swift; sourceTree = "<group>"; };
+		990A23361EAF409600DCE839 /* NKSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKSlider.swift; sourceTree = "<group>"; };
+		990A23371EAF409600DCE839 /* NKSound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKSound.swift; sourceTree = "<group>"; };
+		990A23381EAF409600DCE839 /* NKStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKStyle.swift; sourceTree = "<group>"; };
+		990A23391EAF409600DCE839 /* NKStylesheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKStylesheet.swift; sourceTree = "<group>"; };
+		990A233A1EAF409600DCE839 /* NKTableItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKTableItem.swift; sourceTree = "<group>"; };
+		990A233B1EAF409600DCE839 /* NKView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKView.swift; sourceTree = "<group>"; };
+		990A233C1EAF409600DCE839 /* NKViewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NKViewable.swift; sourceTree = "<group>"; };
+		990A233D1EAF409600DCE839 /* NKViewable+Implementation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NKViewable+Implementation.swift"; sourceTree = "<group>"; };
+		990A233E1EAF409600DCE839 /* NSBezierPath+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSBezierPath+Additions.swift"; sourceTree = "<group>"; };
+		990A233F1EAF409600DCE839 /* NSDate+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Additions.swift"; sourceTree = "<group>"; };
+		990A23401EAF409600DCE839 /* NSFont+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSFont+Additions.swift"; sourceTree = "<group>"; };
+		990A23411EAF409600DCE839 /* NSImage+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImage+Additions.swift"; sourceTree = "<group>"; };
+		990A23421EAF409600DCE839 /* NSMutableAttributedString+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Additions.swift"; sourceTree = "<group>"; };
+		990A23431EAF409600DCE839 /* NSObject+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Additions.swift"; sourceTree = "<group>"; };
+		990A23441EAF409600DCE839 /* NSRect+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSRect+Additions.swift"; sourceTree = "<group>"; };
+		990A23451EAF409600DCE839 /* NSView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSView+Layout.swift"; sourceTree = "<group>"; };
+		990A23461EAF409600DCE839 /* String+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
+		990A23471EAF409600DCE839 /* String+UIAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+UIAdditions.swift"; sourceTree = "<group>"; };
+		990A23481EAF409600DCE839 /* SwiftAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftAdditions.swift; sourceTree = "<group>"; };
+		990A23491EAF409600DCE839 /* XButton+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XButton+Additions.swift"; sourceTree = "<group>"; };
+		990A234A1EAF409600DCE839 /* XScreen+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XScreen+Additions.swift"; sourceTree = "<group>"; };
+		990A234B1EAF409600DCE839 /* XTextField+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XTextField+Additions.swift"; sourceTree = "<group>"; };
+		990A234C1EAF409600DCE839 /* XView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XView+Additions.swift"; sourceTree = "<group>"; };
+		990A234D1EAF409600DCE839 /* XView+Rendering.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XView+Rendering.swift"; sourceTree = "<group>"; };
+		990A23731EAF40A200DCE839 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
+		990A23741EAF40A200DCE839 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		990A23771EAF410600DCE839 /* Cartography.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cartography.framework; path = Carthage/Build/Mac/Cartography.framework; sourceTree = "<group>"; };
+		990A23791EAF417100DCE839 /* SwiftHexColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftHexColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				990A23781EAF410600DCE839 /* Cartography.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,6 +159,7 @@
 			children = (
 				990A22F11EAF406200DCE839 /* NiceKit */,
 				990A22F01EAF406200DCE839 /* Products */,
+				990A23771EAF410600DCE839 /* Cartography.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -46,10 +174,96 @@
 		990A22F11EAF406200DCE839 /* NiceKit */ = {
 			isa = PBXGroup;
 			children = (
+				990A23281EAF408F00DCE839 /* Shared */,
+				990A23211EAF407A00DCE839 /* Shared+Watch */,
+				990A22FA1EAF406700DCE839 /* Mac */,
 				990A22F21EAF406200DCE839 /* NiceKit.h */,
 				990A22F31EAF406200DCE839 /* Info.plist */,
 			);
 			path = NiceKit;
+			sourceTree = "<group>";
+		};
+		990A22FA1EAF406700DCE839 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				990A22FB1EAF407300DCE839 /* NKCustomButton.Mac.swift */,
+				990A22FC1EAF407300DCE839 /* NKButton.swift */,
+				990A22FD1EAF407300DCE839 /* NKCheckbox.swift */,
+				990A22FE1EAF407300DCE839 /* NKLabel.Mac.swift */,
+				990A22FF1EAF407300DCE839 /* NKTableBuilder.Mac.swift */,
+				990A23001EAF407300DCE839 /* NKTableCellView.Mac.swift */,
+				990A23011EAF407300DCE839 /* NKTableView.Mac.swift */,
+				990A23021EAF407300DCE839 /* NKTextArea.Mac.swift */,
+				990A23031EAF407300DCE839 /* NKTextField.Mac.swift */,
+				990A23041EAF407300DCE839 /* NKTransition.Mac.swift */,
+				990A23051EAF407300DCE839 /* NKView.Mac.swift */,
+				990A23061EAF407300DCE839 /* NKWindow.swift */,
+				990A23071EAF407300DCE839 /* NSAffineTransform+Additions.swift */,
+				990A23081EAF407300DCE839 /* NSTextField+Additions.swift */,
+				990A23091EAF407300DCE839 /* NSSegmentedControl+Additions.swift */,
+				990A230A1EAF407300DCE839 /* NSPopUpButton+Additions.swift */,
+				990A230B1EAF407300DCE839 /* NSUserNotification+Additions.swift */,
+				990A230C1EAF407300DCE839 /* NKSimpleTable.Mac.swift */,
+				990A230D1EAF407300DCE839 /* XApplication+Additions.Mac.swift */,
+			);
+			name = Mac;
+			sourceTree = "<group>";
+		};
+		990A23211EAF407A00DCE839 /* Shared+Watch */ = {
+			isa = PBXGroup;
+			children = (
+				990A23221EAF408700DCE839 /* NSNotificationCenter+Additions.swift */,
+				990A23231EAF408700DCE839 /* NSTimer+Additions.swift */,
+				990A23241EAF408700DCE839 /* NSUserDefaults+Additions.swift */,
+			);
+			name = "Shared+Watch";
+			sourceTree = "<group>";
+		};
+		990A23281EAF408F00DCE839 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				990A23791EAF417100DCE839 /* SwiftHexColors.swift */,
+				990A23731EAF40A200DCE839 /* NSString+Additions.m */,
+				990A23741EAF40A200DCE839 /* NSString+Additions.h */,
+				990A23291EAF409600DCE839 /* CAAnimation+Additions.swift */,
+				990A232A1EAF409600DCE839 /* CAAnimationGroup+Additions.swift */,
+				990A232B1EAF409600DCE839 /* CALayer+Additions.swift */,
+				990A232C1EAF409600DCE839 /* NiceKit.swift */,
+				990A232D1EAF409600DCE839 /* NKBezierPath.swift */,
+				990A232E1EAF409600DCE839 /* NKBezierPathView.swift */,
+				990A232F1EAF409600DCE839 /* NKColor.swift */,
+				990A23301EAF409600DCE839 /* NKDrawing.swift */,
+				990A23311EAF409600DCE839 /* NKFieldType.swift */,
+				990A23321EAF409600DCE839 /* NKGradient.swift */,
+				990A23331EAF409600DCE839 /* NKMenu.swift */,
+				990A23341EAF409600DCE839 /* NKPadding.swift */,
+				990A23351EAF409600DCE839 /* NKPlatformsIntegration.swift */,
+				990A23361EAF409600DCE839 /* NKSlider.swift */,
+				990A23371EAF409600DCE839 /* NKSound.swift */,
+				990A23381EAF409600DCE839 /* NKStyle.swift */,
+				990A23391EAF409600DCE839 /* NKStylesheet.swift */,
+				990A233A1EAF409600DCE839 /* NKTableItem.swift */,
+				990A233B1EAF409600DCE839 /* NKView.swift */,
+				990A233C1EAF409600DCE839 /* NKViewable.swift */,
+				990A233D1EAF409600DCE839 /* NKViewable+Implementation.swift */,
+				990A233E1EAF409600DCE839 /* NSBezierPath+Additions.swift */,
+				990A233F1EAF409600DCE839 /* NSDate+Additions.swift */,
+				990A23401EAF409600DCE839 /* NSFont+Additions.swift */,
+				990A23411EAF409600DCE839 /* NSImage+Additions.swift */,
+				990A23421EAF409600DCE839 /* NSMutableAttributedString+Additions.swift */,
+				990A23431EAF409600DCE839 /* NSObject+Additions.swift */,
+				990A23441EAF409600DCE839 /* NSRect+Additions.swift */,
+				990A23451EAF409600DCE839 /* NSView+Layout.swift */,
+				990A23461EAF409600DCE839 /* String+Additions.swift */,
+				990A23471EAF409600DCE839 /* String+UIAdditions.swift */,
+				990A23481EAF409600DCE839 /* SwiftAdditions.swift */,
+				990A23491EAF409600DCE839 /* XButton+Additions.swift */,
+				990A234A1EAF409600DCE839 /* XScreen+Additions.swift */,
+				990A234B1EAF409600DCE839 /* XTextField+Additions.swift */,
+				990A234C1EAF409600DCE839 /* XView+Additions.swift */,
+				990A234D1EAF409600DCE839 /* XView+Rendering.swift */,
+			);
+			name = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,6 +273,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				990A23761EAF40A200DCE839 /* NSString+Additions.h in Headers */,
 				990A22F41EAF406200DCE839 /* NiceKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +311,7 @@
 					990A22EE1EAF406200DCE839 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = Q4C48EKH9Z;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -132,6 +348,67 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				990A231F1EAF407300DCE839 /* NKSimpleTable.Mac.swift in Sources */,
+				990A231A1EAF407300DCE839 /* NSAffineTransform+Additions.swift in Sources */,
+				990A236E1EAF409600DCE839 /* XButton+Additions.swift in Sources */,
+				990A235D1EAF409600DCE839 /* NKStyle.swift in Sources */,
+				990A237A1EAF417100DCE839 /* SwiftHexColors.swift in Sources */,
+				990A236D1EAF409600DCE839 /* SwiftAdditions.swift in Sources */,
+				990A23611EAF409600DCE839 /* NKViewable.swift in Sources */,
+				990A23521EAF409600DCE839 /* NKBezierPath.swift in Sources */,
+				990A23111EAF407300DCE839 /* NKLabel.Mac.swift in Sources */,
+				990A236B1EAF409600DCE839 /* String+Additions.swift in Sources */,
+				990A23271EAF408700DCE839 /* NSUserDefaults+Additions.swift in Sources */,
+				990A23621EAF409600DCE839 /* NKViewable+Implementation.swift in Sources */,
+				990A231B1EAF407300DCE839 /* NSTextField+Additions.swift in Sources */,
+				990A23501EAF409600DCE839 /* CALayer+Additions.swift in Sources */,
+				990A231D1EAF407300DCE839 /* NSPopUpButton+Additions.swift in Sources */,
+				990A236A1EAF409600DCE839 /* NSView+Layout.swift in Sources */,
+				990A230F1EAF407300DCE839 /* NKButton.swift in Sources */,
+				990A23691EAF409600DCE839 /* NSRect+Additions.swift in Sources */,
+				990A23121EAF407300DCE839 /* NKTableBuilder.Mac.swift in Sources */,
+				990A23561EAF409600DCE839 /* NKFieldType.swift in Sources */,
+				990A23511EAF409600DCE839 /* NiceKit.swift in Sources */,
+				990A23591EAF409600DCE839 /* NKPadding.swift in Sources */,
+				990A23531EAF409600DCE839 /* NKBezierPathView.swift in Sources */,
+				990A231C1EAF407300DCE839 /* NSSegmentedControl+Additions.swift in Sources */,
+				990A231E1EAF407300DCE839 /* NSUserNotification+Additions.swift in Sources */,
+				990A236C1EAF409600DCE839 /* String+UIAdditions.swift in Sources */,
+				990A23261EAF408700DCE839 /* NSTimer+Additions.swift in Sources */,
+				990A23631EAF409600DCE839 /* NSBezierPath+Additions.swift in Sources */,
+				990A23711EAF409600DCE839 /* XView+Additions.swift in Sources */,
+				990A23141EAF407300DCE839 /* NKTableView.Mac.swift in Sources */,
+				990A234F1EAF409600DCE839 /* CAAnimationGroup+Additions.swift in Sources */,
+				990A23571EAF409600DCE839 /* NKGradient.swift in Sources */,
+				990A23201EAF407300DCE839 /* XApplication+Additions.Mac.swift in Sources */,
+				990A235E1EAF409600DCE839 /* NKStylesheet.swift in Sources */,
+				990A23721EAF409600DCE839 /* XView+Rendering.swift in Sources */,
+				990A23661EAF409600DCE839 /* NSImage+Additions.swift in Sources */,
+				990A230E1EAF407300DCE839 /* NKCustomButton.Mac.swift in Sources */,
+				990A23581EAF409600DCE839 /* NKMenu.swift in Sources */,
+				990A23151EAF407300DCE839 /* NKTextArea.Mac.swift in Sources */,
+				990A236F1EAF409600DCE839 /* XScreen+Additions.swift in Sources */,
+				990A23651EAF409600DCE839 /* NSFont+Additions.swift in Sources */,
+				990A235A1EAF409600DCE839 /* NKPlatformsIntegration.swift in Sources */,
+				990A235B1EAF409600DCE839 /* NKSlider.swift in Sources */,
+				990A23161EAF407300DCE839 /* NKTextField.Mac.swift in Sources */,
+				990A23251EAF408700DCE839 /* NSNotificationCenter+Additions.swift in Sources */,
+				990A23101EAF407300DCE839 /* NKCheckbox.swift in Sources */,
+				990A23551EAF409600DCE839 /* NKDrawing.swift in Sources */,
+				990A23681EAF409600DCE839 /* NSObject+Additions.swift in Sources */,
+				990A23601EAF409600DCE839 /* NKView.swift in Sources */,
+				990A23641EAF409600DCE839 /* NSDate+Additions.swift in Sources */,
+				990A23171EAF407300DCE839 /* NKTransition.Mac.swift in Sources */,
+				990A23701EAF409600DCE839 /* XTextField+Additions.swift in Sources */,
+				990A23671EAF409600DCE839 /* NSMutableAttributedString+Additions.swift in Sources */,
+				990A234E1EAF409600DCE839 /* CAAnimation+Additions.swift in Sources */,
+				990A23751EAF40A200DCE839 /* NSString+Additions.m in Sources */,
+				990A23541EAF409600DCE839 /* NKColor.swift in Sources */,
+				990A23131EAF407300DCE839 /* NKTableCellView.Mac.swift in Sources */,
+				990A235F1EAF409600DCE839 /* NKTableItem.swift in Sources */,
+				990A235C1EAF409600DCE839 /* NKSound.swift in Sources */,
+				990A23191EAF407300DCE839 /* NKWindow.swift in Sources */,
+				990A23181EAF407300DCE839 /* NKView.Mac.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +516,7 @@
 		990A22F81EAF406200DCE839 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -246,6 +524,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = NiceKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -253,6 +535,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tech.median.NiceKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -260,6 +543,7 @@
 		990A22F91EAF406200DCE839 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -267,6 +551,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = NiceKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
