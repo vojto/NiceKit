@@ -67,8 +67,6 @@
 		990A23701EAF409600DCE839 /* XTextField+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A234B1EAF409600DCE839 /* XTextField+Additions.swift */; };
 		990A23711EAF409600DCE839 /* XView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A234C1EAF409600DCE839 /* XView+Additions.swift */; };
 		990A23721EAF409600DCE839 /* XView+Rendering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A234D1EAF409600DCE839 /* XView+Rendering.swift */; };
-		990A23751EAF40A200DCE839 /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 990A23731EAF40A200DCE839 /* NSString+Additions.m */; };
-		990A23761EAF40A200DCE839 /* NSString+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 990A23741EAF40A200DCE839 /* NSString+Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		990A23781EAF410600DCE839 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 990A23771EAF410600DCE839 /* Cartography.framework */; };
 		990A237A1EAF417100DCE839 /* SwiftHexColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23791EAF417100DCE839 /* SwiftHexColors.swift */; };
 /* End PBXBuildFile section */
@@ -136,8 +134,6 @@
 		990A234B1EAF409600DCE839 /* XTextField+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XTextField+Additions.swift"; sourceTree = "<group>"; };
 		990A234C1EAF409600DCE839 /* XView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XView+Additions.swift"; sourceTree = "<group>"; };
 		990A234D1EAF409600DCE839 /* XView+Rendering.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XView+Rendering.swift"; sourceTree = "<group>"; };
-		990A23731EAF40A200DCE839 /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
-		990A23741EAF40A200DCE839 /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
 		990A23771EAF410600DCE839 /* Cartography.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cartography.framework; path = Carthage/Build/Mac/Cartography.framework; sourceTree = "<group>"; };
 		990A23791EAF417100DCE839 /* SwiftHexColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftHexColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -223,8 +219,6 @@
 			isa = PBXGroup;
 			children = (
 				990A23791EAF417100DCE839 /* SwiftHexColors.swift */,
-				990A23731EAF40A200DCE839 /* NSString+Additions.m */,
-				990A23741EAF40A200DCE839 /* NSString+Additions.h */,
 				990A23291EAF409600DCE839 /* CAAnimation+Additions.swift */,
 				990A232A1EAF409600DCE839 /* CAAnimationGroup+Additions.swift */,
 				990A232B1EAF409600DCE839 /* CALayer+Additions.swift */,
@@ -273,7 +267,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				990A23761EAF40A200DCE839 /* NSString+Additions.h in Headers */,
 				990A22F41EAF406200DCE839 /* NiceKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,7 +395,6 @@
 				990A23701EAF409600DCE839 /* XTextField+Additions.swift in Sources */,
 				990A23671EAF409600DCE839 /* NSMutableAttributedString+Additions.swift in Sources */,
 				990A234E1EAF409600DCE839 /* CAAnimation+Additions.swift in Sources */,
-				990A23751EAF40A200DCE839 /* NSString+Additions.m in Sources */,
 				990A23541EAF409600DCE839 /* NKColor.swift in Sources */,
 				990A23131EAF407300DCE839 /* NKTableCellView.Mac.swift in Sources */,
 				990A235F1EAF409600DCE839 /* NKTableItem.swift in Sources */,
