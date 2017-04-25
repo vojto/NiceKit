@@ -69,6 +69,7 @@
 		990A23721EAF409600DCE839 /* XView+Rendering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A234D1EAF409600DCE839 /* XView+Rendering.swift */; };
 		990A23781EAF410600DCE839 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 990A23771EAF410600DCE839 /* Cartography.framework */; };
 		990A237A1EAF417100DCE839 /* SwiftHexColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23791EAF417100DCE839 /* SwiftHexColors.swift */; };
+		99EEDE5B1EAF8E5900662DED /* NSOutlineView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EEDE5A1EAF8E5900662DED /* NSOutlineView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,6 +137,7 @@
 		990A234D1EAF409600DCE839 /* XView+Rendering.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XView+Rendering.swift"; sourceTree = "<group>"; };
 		990A23771EAF410600DCE839 /* Cartography.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cartography.framework; path = Carthage/Build/Mac/Cartography.framework; sourceTree = "<group>"; };
 		990A23791EAF417100DCE839 /* SwiftHexColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftHexColors.swift; sourceTree = "<group>"; };
+		99EEDE5A1EAF8E5900662DED /* NSOutlineView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSOutlineView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +258,7 @@
 				990A234B1EAF409600DCE839 /* XTextField+Additions.swift */,
 				990A234C1EAF409600DCE839 /* XView+Additions.swift */,
 				990A234D1EAF409600DCE839 /* XView+Rendering.swift */,
+				99EEDE5A1EAF8E5900662DED /* NSOutlineView+Extensions.swift */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				990A23251EAF408700DCE839 /* NSNotificationCenter+Additions.swift in Sources */,
 				990A23101EAF407300DCE839 /* NKCheckbox.swift in Sources */,
 				990A23551EAF409600DCE839 /* NKDrawing.swift in Sources */,
+				99EEDE5B1EAF8E5900662DED /* NSOutlineView+Extensions.swift in Sources */,
 				990A23681EAF409600DCE839 /* NSObject+Additions.swift in Sources */,
 				990A23601EAF409600DCE839 /* NKView.swift in Sources */,
 				990A23641EAF409600DCE839 /* NSDate+Additions.swift in Sources */,
