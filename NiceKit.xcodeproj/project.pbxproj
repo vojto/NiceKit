@@ -69,6 +69,7 @@
 		990A23721EAF409600DCE839 /* XView+Rendering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A234D1EAF409600DCE839 /* XView+Rendering.swift */; };
 		990A23781EAF410600DCE839 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 990A23771EAF410600DCE839 /* Cartography.framework */; };
 		990A237A1EAF417100DCE839 /* SwiftHexColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23791EAF417100DCE839 /* SwiftHexColors.swift */; };
+		99977E941EB0568300B31AF1 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99977E931EB0568300B31AF1 /* Array+Extensions.swift */; };
 		99EEDE5B1EAF8E5900662DED /* NSOutlineView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EEDE5A1EAF8E5900662DED /* NSOutlineView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -137,6 +138,7 @@
 		990A234D1EAF409600DCE839 /* XView+Rendering.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XView+Rendering.swift"; sourceTree = "<group>"; };
 		990A23771EAF410600DCE839 /* Cartography.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cartography.framework; path = Carthage/Build/Mac/Cartography.framework; sourceTree = "<group>"; };
 		990A23791EAF417100DCE839 /* SwiftHexColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftHexColors.swift; sourceTree = "<group>"; };
+		99977E931EB0568300B31AF1 /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		99EEDE5A1EAF8E5900662DED /* NSOutlineView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSOutlineView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -221,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				990A23791EAF417100DCE839 /* SwiftHexColors.swift */,
+				99977E931EB0568300B31AF1 /* Array+Extensions.swift */,
 				990A23291EAF409600DCE839 /* CAAnimation+Additions.swift */,
 				990A232A1EAF409600DCE839 /* CAAnimationGroup+Additions.swift */,
 				990A232B1EAF409600DCE839 /* CALayer+Additions.swift */,
@@ -353,6 +356,7 @@
 				990A23611EAF409600DCE839 /* NKViewable.swift in Sources */,
 				990A23521EAF409600DCE839 /* NKBezierPath.swift in Sources */,
 				990A23111EAF407300DCE839 /* NKLabel.Mac.swift in Sources */,
+				99977E941EB0568300B31AF1 /* Array+Extensions.swift in Sources */,
 				990A236B1EAF409600DCE839 /* String+Additions.swift in Sources */,
 				990A23271EAF408700DCE839 /* NSUserDefaults+Additions.swift in Sources */,
 				990A23621EAF409600DCE839 /* NKViewable+Implementation.swift in Sources */,
