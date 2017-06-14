@@ -9,6 +9,16 @@
 import Foundation
 
 public extension NSOutlineView {
+    func edit(at row: Int, column: Int) {
+        if row == -1 {
+            return
+        }
+        
+        guard let view = self.view(atColumn: column, row: row, makeIfNecessary: false) as? EditableTableCellView else { return }
+        view.startEditing()
+    }
+        
+    
     public func select(row: Int) {
         var row = row
         let total = numberOfRows
