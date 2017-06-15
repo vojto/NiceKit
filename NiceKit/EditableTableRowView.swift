@@ -9,12 +9,12 @@
 import Foundation
 import AppKit
 
-class EditableTableRowView: NSTableRowView {
+open class EditableTableRowView: NSTableRowView {
     var isEditing = false
 }
 
-class CustomTableRowView: EditableTableRowView {
-    override var isSelected: Bool {
+open class CustomTableRowView: EditableTableRowView {
+    override open var isSelected: Bool {
         didSet {
             needsDisplay = true
         }
@@ -28,7 +28,7 @@ class CustomTableRowView: EditableTableRowView {
     
     let blue = NSColor(hexString: "A6CAFD")!.withAlphaComponent(0.3)
     
-    override func drawBackground(in dirtyRect: NSRect) {
+    override open func drawBackground(in dirtyRect: NSRect) {
         let rect = bounds.insetBy(dx: 4, dy: 4)
         let path = NSBezierPath(roundedRect: rect, cornerRadius: 3)
         
