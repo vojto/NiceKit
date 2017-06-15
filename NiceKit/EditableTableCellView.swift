@@ -9,25 +9,25 @@
 import Foundation
 import AppKit
 
-class EditableTableCellView: NSTableCellView, NSTextFieldDelegate {
+open class EditableTableCellView: NSTableCellView, NSTextFieldDelegate {
     var node: NSTreeNode?
     var outlineView: NSOutlineView?
     var isEditing = false
     
-    override func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         
         textField?.delegate = self
     }
     
-    override func controlTextDidEndEditing(_ obj: Notification) {
+    override open func controlTextDidEndEditing(_ obj: Notification) {
         self.finishEditing()
     }
     
-    override func controlTextDidChange(_ obj: Notification) {
+    override open func controlTextDidChange(_ obj: Notification) {
     }
     
-    func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
+    public func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
         if commandSelector == #selector(NSControl.cancelOperation(_:)) {
             window?.makeFirstResponder(nil)
             
