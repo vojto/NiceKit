@@ -71,6 +71,7 @@
 		990A237A1EAF417100DCE839 /* SwiftHexColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23791EAF417100DCE839 /* SwiftHexColors.swift */; };
 		9968F58E1EF1EF2B009E5ADD /* EditableTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968F58D1EF1EF2B009E5ADD /* EditableTableCellView.swift */; };
 		9968F5901EF1EF4E009E5ADD /* EditableTableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968F58F1EF1EF4E009E5ADD /* EditableTableRowView.swift */; };
+		9968F5B71EF3EE9B009E5ADD /* EditableOutlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968F5B61EF3EE9B009E5ADD /* EditableOutlineView.swift */; };
 		99977E941EB0568300B31AF1 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99977E931EB0568300B31AF1 /* Array+Extensions.swift */; };
 		99EEDE5B1EAF8E5900662DED /* NSOutlineView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EEDE5A1EAF8E5900662DED /* NSOutlineView+Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -142,6 +143,7 @@
 		990A23791EAF417100DCE839 /* SwiftHexColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftHexColors.swift; sourceTree = "<group>"; };
 		9968F58D1EF1EF2B009E5ADD /* EditableTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableTableCellView.swift; sourceTree = "<group>"; };
 		9968F58F1EF1EF4E009E5ADD /* EditableTableRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableTableRowView.swift; sourceTree = "<group>"; };
+		9968F5B61EF3EE9B009E5ADD /* EditableOutlineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditableOutlineView.swift; sourceTree = "<group>"; };
 		99977E931EB0568300B31AF1 /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		99EEDE5A1EAF8E5900662DED /* NSOutlineView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSOutlineView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -211,6 +213,7 @@
 				990A230D1EAF407300DCE839 /* XApplication+Additions.Mac.swift */,
 				9968F58D1EF1EF2B009E5ADD /* EditableTableCellView.swift */,
 				9968F58F1EF1EF4E009E5ADD /* EditableTableRowView.swift */,
+				9968F5B61EF3EE9B009E5ADD /* EditableOutlineView.swift */,
 			);
 			name = Mac;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				990A231C1EAF407300DCE839 /* NSSegmentedControl+Additions.swift in Sources */,
 				990A231E1EAF407300DCE839 /* NSUserNotification+Additions.swift in Sources */,
 				990A236C1EAF409600DCE839 /* String+UIAdditions.swift in Sources */,
+				9968F5B71EF3EE9B009E5ADD /* EditableOutlineView.swift in Sources */,
 				990A23261EAF408700DCE839 /* NSTimer+Additions.swift in Sources */,
 				990A23631EAF409600DCE839 /* NSBezierPath+Additions.swift in Sources */,
 				990A23711EAF409600DCE839 /* XView+Additions.swift in Sources */,

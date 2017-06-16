@@ -14,8 +14,14 @@ public extension NSOutlineView {
             return
         }
         
-        guard let view = self.view(atColumn: column, row: row, makeIfNecessary: false) as? EditableTableCellView else { return }
-        view.startEditing()
+        let view = self.view(atColumn: column, row: row, makeIfNecessary: false)
+        
+        if let editableView = view as? EditableTableCellView {
+            editableView.startEditing()
+        }
+        
+//        guard let view = view as? EditableTableCellView else { return assertionFailure() }
+//        view.startEditing()
     }
         
     
