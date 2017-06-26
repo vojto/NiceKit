@@ -20,6 +20,10 @@ open class EditableOutlineView: NSOutlineView {
         
         super.mouseDown(with: event)
         
+        if isEditing {
+            return
+        }
+        
         let finalPoint = convert(window!.mouseLocationOutsideOfEventStream, from: nil)
         //        let finalRowIndex = row(at: finalPoint)
         

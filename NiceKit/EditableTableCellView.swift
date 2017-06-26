@@ -11,7 +11,7 @@ import AppKit
 
 open class EditableTableCellView: NSTableCellView, NSTextFieldDelegate {
     var node: NSTreeNode?
-    var outlineView: NSOutlineView?
+    public var outlineView: NSOutlineView?
     var isEditing = false
     
     override open func awakeFromNib() {
@@ -37,7 +37,7 @@ open class EditableTableCellView: NSTableCellView, NSTextFieldDelegate {
         return false
     }
     
-    func startEditing() {
+    open func startEditing() {
         guard let field = textField else { return }
         
         field.delegate = self
@@ -48,9 +48,11 @@ open class EditableTableCellView: NSTableCellView, NSTextFieldDelegate {
         rowView?.isEditing = true
         
         isEditing = true
+        
+        (outlineView as? EditableOutlineView)?.isEditing = true
     }
     
-    func finishEditing() {
+    open func finishEditing() {
         guard let field = textField else { return }
         
         field.resignFirstResponder()
@@ -59,6 +61,8 @@ open class EditableTableCellView: NSTableCellView, NSTextFieldDelegate {
         rowView?.isEditing = false
         
         isEditing = false
+        
+        (self.outlineView as? EditableOutlineView)?.isEditing = false
     }
     
     var rowView: EditableTableRowView? {

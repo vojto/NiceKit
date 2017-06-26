@@ -10,7 +10,7 @@ import Foundation
 import AppKit
 
 open class EditableTableRowView: NSTableRowView {
-    var isEditing = false
+    open var isEditing = false
 }
 
 open class CustomTableRowView: EditableTableRowView {
@@ -20,17 +20,16 @@ open class CustomTableRowView: EditableTableRowView {
         }
     }
     
-    override var isEditing: Bool {
+    override open var isEditing: Bool {
         didSet {
             needsDisplay = true
         }
     }
     
-    let blue = NSColor(hexString: "A6CAFD")!.withAlphaComponent(0.3)
-    
     override open func drawBackground(in dirtyRect: NSRect) {
         let rect = bounds.insetBy(dx: 4, dy: 4)
         let path = NSBezierPath(roundedRect: rect, cornerRadius: 3)
+        let blue = NSColor(hexString: "A6CAFD")!.withAlphaComponent(0.3)
         
         if isEditing {
             NSColor.white.set()
