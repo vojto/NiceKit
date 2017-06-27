@@ -44,8 +44,8 @@ open class CustomTableRowView: EditableTableRowView {
             blue.setFill()
             path.fill()
         } else {
-//            NSColor.white.set()
-//            NSRectFill(bounds)
+            NSColor.white.set()
+            NSRectFill(bounds)
         }
     }
 }
