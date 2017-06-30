@@ -12,7 +12,7 @@ import AppKit
 open class EditableTableCellView: NSTableCellView, NSTextFieldDelegate {
     var node: NSTreeNode?
     public var outlineView: NSOutlineView?
-    var isEditing = false
+    public var isEditing = false
     
     override open func awakeFromNib() {
         super.awakeFromNib()
@@ -65,7 +65,7 @@ open class EditableTableCellView: NSTableCellView, NSTextFieldDelegate {
         (self.outlineView as? EditableOutlineView)?.isEditing = false
     }
     
-    var rowView: EditableTableRowView? {
+    public var rowView: EditableTableRowView? {
         if let rowView = self.superview as? EditableTableRowView {
             return rowView
         }

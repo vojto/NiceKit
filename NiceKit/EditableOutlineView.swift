@@ -9,7 +9,7 @@
 import Foundation
 import AppKit
 
-open class EditableOutlineView: NSOutlineView {
+open class EditableOutlineView: NiceOutlineView {
     open var isEditing = false
     
     override open func mouseDown(with event: NSEvent) {

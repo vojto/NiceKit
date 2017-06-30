@@ -24,4 +24,17 @@ public extension NSTextField {
         get { return alignment }
         set { alignment = newValue }
     }
+
+    public static func label() -> NSTextField {
+        let field = NSTextField()
+        field.styleAsLabel()
+        return field
+    }
+
+    public func styleAsLabel() {
+        isBordered = false
+        isEditable = false
+        isSelectable = false
+        drawsBackground = false
+    }
 }

@@ -1,15 +1,16 @@
 //
-//  NSOutlineView+Extensions.swift
+//  NiceOutlineView.swift
 //  NiceKit
 //
-//  Created by Vojtech Rinik on 4/25/17.
+//  Created by Vojtech Rinik on 6/30/17.
 //  Copyright © 2017 Median. All rights reserved.
 //
 
-import Foundation
+import Cocoa
 
-public extension NSOutlineView {
-    func edit(at row: Int, column: Int) {
+open class NiceOutlineView: NSOutlineView {
+
+    open func edit(at row: Int, column: Int) {
         if row == -1 {
             return
         }
@@ -19,13 +20,10 @@ public extension NSOutlineView {
         if let editableView = view as? EditableTableCellView {
             editableView.startEditing()
         }
-        
-//        guard let view = view as? EditableTableCellView else { return assertionFailure() }
-//        view.startEditing()
     }
-        
     
-    public func select(row: Int) {
+    
+    open func select(row: Int) {
         var row = row
         let total = numberOfRows
         
@@ -35,4 +33,5 @@ public extension NSOutlineView {
         
         selectRowIndexes(IndexSet([row]), byExtendingSelection: false)
     }
+    
 }

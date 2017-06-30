@@ -72,8 +72,8 @@
 		9968F58E1EF1EF2B009E5ADD /* EditableTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968F58D1EF1EF2B009E5ADD /* EditableTableCellView.swift */; };
 		9968F5901EF1EF4E009E5ADD /* EditableTableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968F58F1EF1EF4E009E5ADD /* EditableTableRowView.swift */; };
 		9968F5B71EF3EE9B009E5ADD /* EditableOutlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968F5B61EF3EE9B009E5ADD /* EditableOutlineView.swift */; };
+		998F96571F063DC600277C94 /* NiceOutlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998F96561F063DC600277C94 /* NiceOutlineView.swift */; };
 		99977E941EB0568300B31AF1 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99977E931EB0568300B31AF1 /* Array+Extensions.swift */; };
-		99EEDE5B1EAF8E5900662DED /* NSOutlineView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EEDE5A1EAF8E5900662DED /* NSOutlineView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -144,8 +144,8 @@
 		9968F58D1EF1EF2B009E5ADD /* EditableTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableTableCellView.swift; sourceTree = "<group>"; };
 		9968F58F1EF1EF4E009E5ADD /* EditableTableRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableTableRowView.swift; sourceTree = "<group>"; };
 		9968F5B61EF3EE9B009E5ADD /* EditableOutlineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditableOutlineView.swift; sourceTree = "<group>"; };
+		998F96561F063DC600277C94 /* NiceOutlineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceOutlineView.swift; sourceTree = "<group>"; };
 		99977E931EB0568300B31AF1 /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
-		99EEDE5A1EAF8E5900662DED /* NSOutlineView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSOutlineView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,7 +270,7 @@
 				990A234B1EAF409600DCE839 /* XTextField+Additions.swift */,
 				990A234C1EAF409600DCE839 /* XView+Additions.swift */,
 				990A234D1EAF409600DCE839 /* XView+Rendering.swift */,
-				99EEDE5A1EAF8E5900662DED /* NSOutlineView+Extensions.swift */,
+				998F96561F063DC600277C94 /* NiceOutlineView.swift */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -356,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				998F96571F063DC600277C94 /* NiceOutlineView.swift in Sources */,
 				990A231F1EAF407300DCE839 /* NKSimpleTable.Mac.swift in Sources */,
 				990A231A1EAF407300DCE839 /* NSAffineTransform+Additions.swift in Sources */,
 				990A236E1EAF409600DCE839 /* XButton+Additions.swift in Sources */,
@@ -407,7 +408,6 @@
 				990A23251EAF408700DCE839 /* NSNotificationCenter+Additions.swift in Sources */,
 				990A23101EAF407300DCE839 /* NKCheckbox.swift in Sources */,
 				990A23551EAF409600DCE839 /* NKDrawing.swift in Sources */,
-				99EEDE5B1EAF8E5900662DED /* NSOutlineView+Extensions.swift in Sources */,
 				990A23681EAF409600DCE839 /* NSObject+Additions.swift in Sources */,
 				990A23601EAF409600DCE839 /* NKView.swift in Sources */,
 				990A23641EAF409600DCE839 /* NSDate+Additions.swift in Sources */,
