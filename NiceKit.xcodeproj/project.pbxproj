@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		990612F41F066EED0071F181 /* NiceField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990612F31F066EED0071F181 /* NiceField.swift */; };
 		990A22F41EAF406200DCE839 /* NiceKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 990A22F21EAF406200DCE839 /* NiceKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		990A230E1EAF407300DCE839 /* NKCustomButton.Mac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A22FB1EAF407300DCE839 /* NKCustomButton.Mac.swift */; };
 		990A230F1EAF407300DCE839 /* NKButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A22FC1EAF407300DCE839 /* NKButton.swift */; };
@@ -77,6 +78,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		990612F31F066EED0071F181 /* NiceField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceField.swift; sourceTree = "<group>"; };
 		990A22EF1EAF406200DCE839 /* NiceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NiceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		990A22F21EAF406200DCE839 /* NiceKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NiceKit.h; sourceTree = "<group>"; };
 		990A22F31EAF406200DCE839 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 				990A234C1EAF409600DCE839 /* XView+Additions.swift */,
 				990A234D1EAF409600DCE839 /* XView+Rendering.swift */,
 				998F96561F063DC600277C94 /* NiceOutlineView.swift */,
+				990612F31F066EED0071F181 /* NiceField.swift */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				990A235A1EAF409600DCE839 /* NKPlatformsIntegration.swift in Sources */,
 				990A235B1EAF409600DCE839 /* NKSlider.swift in Sources */,
 				990A23161EAF407300DCE839 /* NKTextField.Mac.swift in Sources */,
+				990612F41F066EED0071F181 /* NiceField.swift in Sources */,
 				990A23251EAF408700DCE839 /* NSNotificationCenter+Additions.swift in Sources */,
 				990A23101EAF407300DCE839 /* NKCheckbox.swift in Sources */,
 				990A23551EAF409600DCE839 /* NKDrawing.swift in Sources */,
