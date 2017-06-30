@@ -10,8 +10,8 @@ import Cocoa
 import AppKit
 import Cartography
 
-fileprivate let text = NSColor(hexString: "36373B")!
-fileprivate let lightText = NSColor(hexString: "ACB3BB")!
+fileprivate let text = NSColor(hexString: "9099A3")!
+fileprivate let lightText = NSColor(hexString: "9099A3")!
 
 fileprivate let lightBorder = NSColor(hexString: "E6EBF0")!
 
@@ -19,7 +19,7 @@ open class NiceField: NSView, NSTextFieldDelegate {
 
     public let field = NSTextField()
 
-    public let width = CGFloat(140.0)
+    public let width = CGFloat(80.0)
     let marginSide = CGFloat(6.0)
 
     var widthConstraint: NSLayoutConstraint?
@@ -57,8 +57,9 @@ open class NiceField: NSView, NSTextFieldDelegate {
         field.isSelectable = false
         field.isEditable = false
         field.backgroundColor = NSColor.clear
+        field.font = NSFont.systemFont(ofSize: 12)
         //        field.drawsBackground = false
-        field.stringValue = "No project"
+        field.stringValue = "wtf"
         field.textColor = lightText
         field.focusRingType = .none
         field.setContentCompressionResistancePriority(.greatestFiniteMagnitude, for: .horizontal)
@@ -91,6 +92,10 @@ open class NiceField: NSView, NSTextFieldDelegate {
 
     override open func mouseExited(with event: NSEvent) {
         layer?.borderWidth = 0
+    }
+
+    override open func mouseDown(with event: NSEvent) {
+        startEditing()
     }
 
     open func startEditing() {

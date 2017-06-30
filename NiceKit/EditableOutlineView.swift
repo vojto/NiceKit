@@ -10,7 +10,12 @@ import Foundation
 import AppKit
 
 open class EditableOutlineView: NiceOutlineView {
-    open var isEditing = false
+    open var editedCellView: EditableTableCellView?
+
+    open var isEditing: Bool {
+        return editedCellView != nil
+    }
+
     
     override open func mouseDown(with event: NSEvent) {
         let point    = convert(event.locationInWindow, from: nil)

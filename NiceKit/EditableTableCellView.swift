@@ -38,18 +38,27 @@ open class EditableTableCellView: NSTableCellView, NSTextFieldDelegate {
     }
     
     open func startEditing() {
+
         guard let field = textField else { return }
         
         field.delegate = self
         
         field.isEditable = true
+
+//        DispatchQueue.main.async {
+//            field.currentEditor()?.moveToEndOfLine(nil)
+//        }
+
+
         window?.makeFirstResponder(field)
         
         rowView?.isEditing = true
-        
+
         isEditing = true
         
-        (outlineView as? EditableOutlineView)?.isEditing = true
+        (outlineView as? EditableOutlineView)?.editedCellView = self
+
+        field.currentEditor()?.moveToEndOfLine(nil)
     }
     
     open func finishEditing() {
@@ -62,7 +71,7 @@ open class EditableTableCellView: NSTableCellView, NSTextFieldDelegate {
         
         isEditing = false
         
-        (self.outlineView as? EditableOutlineView)?.isEditing = false
+        (self.outlineView as? EditableOutlineView)?.editedCellView = nil
     }
     
     public var rowView: EditableTableRowView? {
