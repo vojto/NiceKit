@@ -19,12 +19,12 @@ open class NiceField: NSView, NSTextFieldDelegate {
 
     public let field = NSTextField()
 
-    let width = CGFloat(140.0)
+    public let width = CGFloat(140.0)
     let marginSide = CGFloat(6.0)
 
     var widthConstraint: NSLayoutConstraint?
 
-    var stringValue: String {
+    public var stringValue: String {
         get {
             return field.stringValue
         }
