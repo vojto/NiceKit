@@ -70,6 +70,12 @@
 		990A23721EAF409600DCE839 /* XView+Rendering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A234D1EAF409600DCE839 /* XView+Rendering.swift */; };
 		990A23781EAF410600DCE839 /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 990A23771EAF410600DCE839 /* Cartography.framework */; };
 		990A237A1EAF417100DCE839 /* SwiftHexColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A23791EAF417100DCE839 /* SwiftHexColors.swift */; };
+		992C04B71F0A5AFB00028E01 /* NiceMenuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C04B21F0A5AFB00028E01 /* NiceMenuTableView.swift */; };
+		992C04B81F0A5AFB00028E01 /* NicePopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C04B31F0A5AFB00028E01 /* NicePopover.swift */; };
+		992C04B91F0A5AFB00028E01 /* NiceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C04B41F0A5AFB00028E01 /* NiceButton.swift */; };
+		992C04BA1F0A5AFB00028E01 /* NicePopoverContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C04B51F0A5AFB00028E01 /* NicePopoverContentView.swift */; };
+		992C04BB1F0A5AFB00028E01 /* NiceMenuTableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C04B61F0A5AFB00028E01 /* NiceMenuTableRowView.swift */; };
+		992C04BE1F0A607A00028E01 /* NiceColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992C04BD1F0A607A00028E01 /* NiceColors.swift */; };
 		9968F58E1EF1EF2B009E5ADD /* EditableTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968F58D1EF1EF2B009E5ADD /* EditableTableCellView.swift */; };
 		9968F5901EF1EF4E009E5ADD /* EditableTableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968F58F1EF1EF4E009E5ADD /* EditableTableRowView.swift */; };
 		9968F5B71EF3EE9B009E5ADD /* EditableOutlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968F5B61EF3EE9B009E5ADD /* EditableOutlineView.swift */; };
@@ -143,6 +149,12 @@
 		990A234D1EAF409600DCE839 /* XView+Rendering.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XView+Rendering.swift"; sourceTree = "<group>"; };
 		990A23771EAF410600DCE839 /* Cartography.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cartography.framework; path = Carthage/Build/Mac/Cartography.framework; sourceTree = "<group>"; };
 		990A23791EAF417100DCE839 /* SwiftHexColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftHexColors.swift; sourceTree = "<group>"; };
+		992C04B21F0A5AFB00028E01 /* NiceMenuTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NiceMenuTableView.swift; path = ../../Timelist/Timelist/NiceMenuTableView.swift; sourceTree = "<group>"; };
+		992C04B31F0A5AFB00028E01 /* NicePopover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NicePopover.swift; path = ../../Timelist/Timelist/NicePopover.swift; sourceTree = "<group>"; };
+		992C04B41F0A5AFB00028E01 /* NiceButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NiceButton.swift; path = ../../Timelist/Timelist/NiceButton.swift; sourceTree = "<group>"; };
+		992C04B51F0A5AFB00028E01 /* NicePopoverContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NicePopoverContentView.swift; path = ../../Timelist/Timelist/NicePopoverContentView.swift; sourceTree = "<group>"; };
+		992C04B61F0A5AFB00028E01 /* NiceMenuTableRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NiceMenuTableRowView.swift; path = ../../Timelist/Timelist/NiceMenuTableRowView.swift; sourceTree = "<group>"; };
+		992C04BD1F0A607A00028E01 /* NiceColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiceColors.swift; sourceTree = "<group>"; };
 		9968F58D1EF1EF2B009E5ADD /* EditableTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableTableCellView.swift; sourceTree = "<group>"; };
 		9968F58F1EF1EF4E009E5ADD /* EditableTableRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableTableRowView.swift; sourceTree = "<group>"; };
 		9968F5B61EF3EE9B009E5ADD /* EditableOutlineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditableOutlineView.swift; sourceTree = "<group>"; };
@@ -216,6 +228,12 @@
 				9968F58D1EF1EF2B009E5ADD /* EditableTableCellView.swift */,
 				9968F58F1EF1EF4E009E5ADD /* EditableTableRowView.swift */,
 				9968F5B61EF3EE9B009E5ADD /* EditableOutlineView.swift */,
+				992C04BD1F0A607A00028E01 /* NiceColors.swift */,
+				992C04B41F0A5AFB00028E01 /* NiceButton.swift */,
+				992C04B31F0A5AFB00028E01 /* NicePopover.swift */,
+				992C04B51F0A5AFB00028E01 /* NicePopoverContentView.swift */,
+				992C04B21F0A5AFB00028E01 /* NiceMenuTableView.swift */,
+				992C04B61F0A5AFB00028E01 /* NiceMenuTableRowView.swift */,
 			);
 			name = Mac;
 			sourceTree = "<group>";
@@ -366,18 +384,21 @@
 				990A235D1EAF409600DCE839 /* NKStyle.swift in Sources */,
 				990A237A1EAF417100DCE839 /* SwiftHexColors.swift in Sources */,
 				990A236D1EAF409600DCE839 /* SwiftAdditions.swift in Sources */,
+				992C04B71F0A5AFB00028E01 /* NiceMenuTableView.swift in Sources */,
 				990A23611EAF409600DCE839 /* NKViewable.swift in Sources */,
 				990A23521EAF409600DCE839 /* NKBezierPath.swift in Sources */,
 				990A23111EAF407300DCE839 /* NKLabel.Mac.swift in Sources */,
 				99977E941EB0568300B31AF1 /* Array+Extensions.swift in Sources */,
 				990A236B1EAF409600DCE839 /* String+Additions.swift in Sources */,
 				990A23271EAF408700DCE839 /* NSUserDefaults+Additions.swift in Sources */,
+				992C04B81F0A5AFB00028E01 /* NicePopover.swift in Sources */,
 				990A23621EAF409600DCE839 /* NKViewable+Implementation.swift in Sources */,
 				990A231B1EAF407300DCE839 /* NSTextField+Additions.swift in Sources */,
 				990A23501EAF409600DCE839 /* CALayer+Additions.swift in Sources */,
 				990A231D1EAF407300DCE839 /* NSPopUpButton+Additions.swift in Sources */,
 				990A236A1EAF409600DCE839 /* NSView+Layout.swift in Sources */,
 				990A230F1EAF407300DCE839 /* NKButton.swift in Sources */,
+				992C04B91F0A5AFB00028E01 /* NiceButton.swift in Sources */,
 				990A23691EAF409600DCE839 /* NSRect+Additions.swift in Sources */,
 				990A23121EAF407300DCE839 /* NKTableBuilder.Mac.swift in Sources */,
 				9968F58E1EF1EF2B009E5ADD /* EditableTableCellView.swift in Sources */,
@@ -389,6 +410,7 @@
 				990A231C1EAF407300DCE839 /* NSSegmentedControl+Additions.swift in Sources */,
 				990A231E1EAF407300DCE839 /* NSUserNotification+Additions.swift in Sources */,
 				990A236C1EAF409600DCE839 /* String+UIAdditions.swift in Sources */,
+				992C04BA1F0A5AFB00028E01 /* NicePopoverContentView.swift in Sources */,
 				9968F5B71EF3EE9B009E5ADD /* EditableOutlineView.swift in Sources */,
 				990A23261EAF408700DCE839 /* NSTimer+Additions.swift in Sources */,
 				990A23631EAF409600DCE839 /* NSBezierPath+Additions.swift in Sources */,
@@ -399,6 +421,7 @@
 				990A23201EAF407300DCE839 /* XApplication+Additions.Mac.swift in Sources */,
 				990A235E1EAF409600DCE839 /* NKStylesheet.swift in Sources */,
 				990A23721EAF409600DCE839 /* XView+Rendering.swift in Sources */,
+				992C04BE1F0A607A00028E01 /* NiceColors.swift in Sources */,
 				990A23661EAF409600DCE839 /* NSImage+Additions.swift in Sources */,
 				990A230E1EAF407300DCE839 /* NKCustomButton.Mac.swift in Sources */,
 				990A23581EAF409600DCE839 /* NKMenu.swift in Sources */,
@@ -416,6 +439,7 @@
 				990A23601EAF409600DCE839 /* NKView.swift in Sources */,
 				990A23641EAF409600DCE839 /* NSDate+Additions.swift in Sources */,
 				990A23171EAF407300DCE839 /* NKTransition.Mac.swift in Sources */,
+				992C04BB1F0A5AFB00028E01 /* NiceMenuTableRowView.swift in Sources */,
 				990A23701EAF409600DCE839 /* XTextField+Additions.swift in Sources */,
 				990A23671EAF409600DCE839 /* NSMutableAttributedString+Additions.swift in Sources */,
 				990A234E1EAF409600DCE839 /* CAAnimation+Additions.swift in Sources */,

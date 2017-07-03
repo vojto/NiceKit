@@ -10,10 +10,6 @@ import Cocoa
 import AppKit
 import Cartography
 
-fileprivate let text = NSColor(hexString: "9099A3")!
-fileprivate let lightText = NSColor(hexString: "9099A3")!
-
-fileprivate let lightBorder = NSColor(hexString: "E6EBF0")!
 
 open class NiceField: NSView, NSTextFieldDelegate {
 
@@ -51,7 +47,7 @@ open class NiceField: NSView, NSTextFieldDelegate {
 
         layer?.actions = ["borderWidth": NSNull()]
         layer?.borderWidth = 0
-        layer?.borderColor = lightBorder.cgColor
+        layer?.borderColor = NiceColors.lightBorder.cgColor
         layer?.cornerRadius = 3.0
         layer?.anchorPoint = CGPoint(x: 0.5, y: 0.5)
 
@@ -62,7 +58,7 @@ open class NiceField: NSView, NSTextFieldDelegate {
         field.font = NSFont.systemFont(ofSize: 12)
         //        field.drawsBackground = false
         field.stringValue = "wtf"
-        field.textColor = lightText
+        field.textColor = NiceColors.lightText
         field.focusRingType = .none
         field.setContentCompressionResistancePriority(.greatestFiniteMagnitude, for: .horizontal)
 
@@ -101,10 +97,10 @@ open class NiceField: NSView, NSTextFieldDelegate {
     }
 
     open func startEditing() {
-        layer?.backgroundColor = lightBorder.cgColor
+        layer?.backgroundColor = NiceColors.lightBorder.cgColor
 
         field.isEditable = true
-        field.textColor = text
+        field.textColor = NiceColors.text
 
         widthConstraint?.isActive = true
         widthConstraint?.constant = width
@@ -143,7 +139,7 @@ open class NiceField: NSView, NSTextFieldDelegate {
 
         field.isEditable = false
         field.isSelectable = false
-        field.textColor = lightText
+        field.textColor = NiceColors.lightText
 
         let width = field.intrinsicContentSize.width + marginSide * 2
         widthConstraint?.constant = width
