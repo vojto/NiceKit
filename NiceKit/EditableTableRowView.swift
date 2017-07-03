@@ -14,6 +14,8 @@ open class EditableTableRowView: NSTableRowView {
 }
 
 open class CustomTableRowView: EditableTableRowView {
+    static var selectionColor = NSColor(hexString: "EBEDEE")!
+    
     override open var isSelected: Bool {
         didSet {
             needsDisplay = true
@@ -29,7 +31,7 @@ open class CustomTableRowView: EditableTableRowView {
     override open func drawBackground(in dirtyRect: NSRect) {
         let rect = bounds.insetBy(dx: 4, dy: 4)
         let path = NSBezierPath(roundedRect: rect, cornerRadius: 3)
-        let blue = NSColor(hexString: "A6CAFD")!.withAlphaComponent(0.3)
+        let blue = CustomTableRowView.selectionColor
         
         if isEditing {
             NSColor.white.set()
