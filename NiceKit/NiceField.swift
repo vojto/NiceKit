@@ -118,7 +118,7 @@ open class NiceField: NSView, NSTextFieldDelegate {
         self.finishEditing()
     }
 
-    public func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
+    open func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
 
         if commandSelector == #selector(NSResponder.insertNewline(_:)) {
             self.finishEditing()
