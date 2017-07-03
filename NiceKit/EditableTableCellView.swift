@@ -27,7 +27,7 @@ open class EditableTableCellView: NSTableCellView, NSTextFieldDelegate {
     override open func controlTextDidChange(_ obj: Notification) {
     }
     
-    public func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
+    open func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
         if commandSelector == #selector(NSControl.cancelOperation(_:)) {
             window?.makeFirstResponder(nil)
             

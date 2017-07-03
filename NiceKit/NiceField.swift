@@ -33,6 +33,8 @@ open class NiceField: NSView, NSTextFieldDelegate {
         }
     }
 
+    public var onChange: ((String) -> ())?
+
     override public init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
         setup()
@@ -103,7 +105,6 @@ open class NiceField: NSView, NSTextFieldDelegate {
 
         field.isEditable = true
         field.textColor = text
-        field.stringValue = ""
 
         widthConstraint?.isActive = true
         widthConstraint?.constant = width
@@ -121,13 +122,31 @@ open class NiceField: NSView, NSTextFieldDelegate {
         self.finishEditing()
     }
 
+    public func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
+
+        if commandSelector == #selector(NSResponder.insertNewline(_:)) {
+            self.finishEditing()
+            return false
+        } else if commandSelector == #selector(NSResponder.cancelOperation(_:)) {
+            self.finishEditing()
+            return false
+        } else if commandSelector == #selector(NSResponder.insertTab(_:)) {
+            self.finishEditing()
+            return false
+        }
+
+        return true
+    }
+
     open func finishEditing() {
+        window?.makeFirstResponder(nil)
+
         field.isEditable = false
+        field.isSelectable = false
         field.textColor = lightText
 
         let width = field.intrinsicContentSize.width + marginSide * 2
         widthConstraint?.constant = width
-
 
         layer?.backgroundColor = nil
 
@@ -135,6 +154,8 @@ open class NiceField: NSView, NSTextFieldDelegate {
             context.duration = 0.15
             context.allowsImplicitAnimation = true
             self.layoutSubtreeIfNeeded()
+
+            self.onChange?(field.stringValue)
         }, completionHandler: nil)
     }
 
