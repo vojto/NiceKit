@@ -1,6 +1,6 @@
 //
 //  NicePopover.swift
-//  Timelist
+//  NiceKit
 //
 //  Created by Vojtech Rinik on 6/16/17.
 //  Copyright © 2017 Vojtech Rinik. All rights reserved.
