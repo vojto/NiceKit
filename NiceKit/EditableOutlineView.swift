@@ -39,4 +39,5 @@ open class EditableOutlineView: NiceOutlineView {
             edit(at: rowIndex, column: columnIndex)
         }
     }
+
 }

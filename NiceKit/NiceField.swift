@@ -14,8 +14,13 @@ import Cartography
 open class NiceField: NSView, NSTextFieldDelegate {
 
     public let field = NSTextField()
+    public var textColor = NiceColors.lightText { didSet { updateStyle() }}
+    public var borderColor = NiceColors.lightBorder { didSet { updateStyle() }}
+    public var editingBackgroundColor = NiceColors.lightBorder { didSet { updateStyle() }}
 
-    public let width = CGFloat(80.0)
+    open var width: CGFloat {
+        return 80.0
+    }
     let marginSide = CGFloat(6.0)
 
     var widthConstraint: NSLayoutConstraint?
@@ -47,7 +52,7 @@ open class NiceField: NSView, NSTextFieldDelegate {
 
         layer?.actions = ["borderWidth": NSNull()]
         layer?.borderWidth = 0
-        layer?.borderColor = NiceColors.lightBorder.cgColor
+        layer?.borderColor = borderColor.cgColor
         layer?.cornerRadius = 3.0
         layer?.anchorPoint = CGPoint(x: 0.5, y: 0.5)
 
@@ -58,7 +63,6 @@ open class NiceField: NSView, NSTextFieldDelegate {
         field.font = NSFont.systemFont(ofSize: 12)
         //        field.drawsBackground = false
         field.stringValue = "wtf"
-        field.textColor = NiceColors.lightText
         field.focusRingType = .none
         field.setContentCompressionResistancePriority(.greatestFiniteMagnitude, for: .horizontal)
 
@@ -73,6 +77,11 @@ open class NiceField: NSView, NSTextFieldDelegate {
         widthConstraint?.isActive = false
     }
 
+    func updateStyle() {
+        field.textColor = self.textColor
+        layer?.borderColor = self.borderColor.cgColor
+    }
+
     var trackingArea: NSTrackingArea?
 
     override open func updateTrackingAreas() {
@@ -84,8 +93,12 @@ open class NiceField: NSView, NSTextFieldDelegate {
         self.addTrackingArea(trackingArea!)
     }
 
+    var isEditing: Bool = false
+
     override open func mouseEntered(with event: NSEvent) {
-        layer?.borderWidth = 1
+        if !isEditing {
+            layer?.borderWidth = 1
+        }
     }
 
     override open func mouseExited(with event: NSEvent) {
@@ -97,10 +110,11 @@ open class NiceField: NSView, NSTextFieldDelegate {
     }
 
     open func startEditing() {
-        layer?.backgroundColor = NiceColors.lightBorder.cgColor
+        layer?.backgroundColor = self.editingBackgroundColor.cgColor
+        layer?.borderWidth = 0
 
         field.isEditable = true
-        field.textColor = NiceColors.text
+        field.textColor = self.textColor
 
         widthConstraint?.isActive = true
         widthConstraint?.constant = width
@@ -112,26 +126,31 @@ open class NiceField: NSView, NSTextFieldDelegate {
         }, completionHandler: nil)
 
         window?.makeFirstResponder(field)
+
+        isEditing = true
+
+        field.currentEditor()?.moveToEndOfLine(nil)
     }
 
     override open func controlTextDidEndEditing(_ obj: Notification) {
         self.finishEditing()
     }
 
+    
     open func control(_ control: NSControl, textView: NSTextView, doCommandBy commandSelector: Selector) -> Bool {
 
         if commandSelector == #selector(NSResponder.insertNewline(_:)) {
             self.finishEditing()
-            return false
+            return true
         } else if commandSelector == #selector(NSResponder.cancelOperation(_:)) {
             self.finishEditing()
-            return false
+            return true
         } else if commandSelector == #selector(NSResponder.insertTab(_:)) {
             self.finishEditing()
-            return false
+            return true
         }
 
-        return true
+        return false
     }
 
     open func finishEditing() {
@@ -139,7 +158,7 @@ open class NiceField: NSView, NSTextFieldDelegate {
 
         field.isEditable = false
         field.isSelectable = false
-        field.textColor = NiceColors.lightText
+        field.textColor = self.textColor
 
         let width = field.intrinsicContentSize.width + marginSide * 2
         widthConstraint?.constant = width
@@ -153,6 +172,8 @@ open class NiceField: NSView, NSTextFieldDelegate {
 
             self.onChange?(field.stringValue)
         }, completionHandler: nil)
+
+        isEditing = false
     }
 
 }

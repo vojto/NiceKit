@@ -11,7 +11,7 @@ import AppKit
 
 open class EditableTableCellView: NSTableCellView, NSTextFieldDelegate {
     var node: NSTreeNode?
-    public var outlineView: NiceOutlineView?
+    public var outlineView: EditableOutlineView?
     public var isEditing = false
     
     override open func awakeFromNib() {
