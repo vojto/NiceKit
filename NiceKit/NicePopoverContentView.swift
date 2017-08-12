@@ -10,6 +10,10 @@ import Foundation
 import AppKit
 
 public class NicePopoverContentView: NSView {
+    var style = NicePopover.Style.hud {
+        didSet { updateStyle() }
+    }
+
     override public init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
         setup()
@@ -21,15 +25,23 @@ public class NicePopoverContentView: NSView {
     }
 
     func setup() {
-        Swift.print("Setting up Popover's content view")
-
         self.layer = CALayer()
         self.wantsLayer = true
 
+        updateStyle()
+    }
+
+    func updateStyle() {
         layer?.cornerRadius = 4.0
         layer?.masksToBounds = true
-        //        layer?.backgroundColor = NSColor(calibratedWhite: 0, alpha: 0.8).cgColor
-        layer?.backgroundColor = NSColor(hexString: "2B323B")!.cgColor
+
+        switch style {
+        case .normal:
+            layer?.backgroundColor = NSColor(hexString: "ffffff")!.cgColor
+        case .hud:
+            layer?.backgroundColor = NSColor(hexString: "2B323B")!.cgColor
+        }
+
     }
 }
 
