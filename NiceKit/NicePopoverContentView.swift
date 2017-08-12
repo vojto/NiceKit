@@ -9,13 +9,13 @@
 import Foundation
 import AppKit
 
-class NicePopoverContentView: NSView {
-    override init(frame frameRect: NSRect) {
+public class NicePopoverContentView: NSView {
+    override public init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
         setup()
     }
 
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         super.init(coder: coder)
         setup()
     }

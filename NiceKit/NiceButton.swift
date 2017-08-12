@@ -9,29 +9,29 @@
 import AppKit
 import Cartography
 
-class NiceButton: NSView {
-    var image: NSImage? {
+public class NiceButton: NSView {
+    public var image: NSImage? {
         didSet { update() }
     }
-    var title: String? {
+    public var title: String? {
         didSet { update() }
     }
-    var color = NSColor.labelColor {
+    public var color = NSColor.labelColor {
         didSet { update() }
     }
-    var font = NSFont.systemFont(ofSize: 13) {
+    public var font = NSFont.systemFont(ofSize: 13) {
         didSet {
             label.font = self.font
         }
     }
 
-    var onClick: (() -> ())?
+    public var onClick: (() -> ())?
 
     let stackView = NSStackView()
     let imageView = NSImageView()
     let label = NSTextField()
 
-    init(title: String, image: NSImage) {
+    public init(title: String, image: NSImage) {
         super.init(frame: NSZeroRect)
 
         self.image = image
@@ -40,11 +40,11 @@ class NiceButton: NSView {
         setup()
     }
 
-    override init(frame frameRect: NSRect) {
+    override public init(frame frameRect: NSRect) {
         fatalError("call init(title:image:)")
     }
 
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("call init(title:image:)")
     }
 
@@ -101,22 +101,22 @@ class NiceButton: NSView {
         self.addTrackingArea(trackingArea!)
     }
 
-    override func mouseEntered(with event: NSEvent) {
+    override public func mouseEntered(with event: NSEvent) {
         layer?.borderWidth = 1
     }
 
-    override func mouseExited(with event: NSEvent) {
+    override public func mouseExited(with event: NSEvent) {
         layer?.borderWidth = 0
     }
 
-    override func mouseDown(with event: NSEvent) {
+    override public func mouseDown(with event: NSEvent) {
         layer?.backgroundColor = NiceColors.lightBorder.cgColor
         layer?.transform = CATransform3DMakeScale(0.95, 0.95, 1)
 
         super.mouseDown(with: event)
     }
 
-    override func mouseUp(with event: NSEvent) {
+    override public func mouseUp(with event: NSEvent) {
         layer?.backgroundColor = nil
         layer?.transform = CATransform3DIdentity
 
