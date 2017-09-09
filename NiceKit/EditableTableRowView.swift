@@ -14,7 +14,7 @@ open class EditableTableRowView: NSTableRowView {
 }
 
 open class CustomTableRowView: EditableTableRowView {
-    static var selectionColor = NSColor(hexString: "EBEDEE")!
+    static var selectionColor = NSColor(hexString: "ECEEFA")!
     
     override open var isSelected: Bool {
         didSet {

@@ -21,7 +21,7 @@ open class NiceField: NSView, NSTextFieldDelegate {
     open var width: CGFloat {
         return 80.0
     }
-    let marginSide = CGFloat(6.0)
+    let marginSide = CGFloat(4.0)
 
     var widthConstraint: NSLayoutConstraint?
 
