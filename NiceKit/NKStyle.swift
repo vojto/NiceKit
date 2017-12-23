@@ -216,19 +216,19 @@ open class NKStyle {
                 var weight: CGFloat!
 
                 switch(fontWeight) {
-                case .UltraLight?: weight = XFontWeightUltraLight
-                case .Thin?: weight = XFontWeightThin
-                case .Light?: weight = XFontWeightLight
-                case .Regular?: weight = XFontWeightRegular
-                case .Medium?: weight = XFontWeightMedium
-                case .Semibold?: weight = XFontWeightSemibold
-                case .Bold?: weight = XFontWeightBold
-                case .Heavy?: weight = XFontWeightHeavy
-                case .Black?: weight = XFontWeightBlack
-                default: weight = XFontWeightRegular
+                case .UltraLight?: weight = XFontWeightUltraLight.rawValue
+                case .Thin?: weight = XFontWeightThin.rawValue
+                case .Light?: weight = XFontWeightLight.rawValue
+                case .Regular?: weight = XFontWeightRegular.rawValue
+                case .Medium?: weight = XFontWeightMedium.rawValue
+                case .Semibold?: weight = XFontWeightSemibold.rawValue
+                case .Bold?: weight = XFontWeightBold.rawValue
+                case .Heavy?: weight = XFontWeightHeavy.rawValue
+                case .Black?: weight = XFontWeightBlack.rawValue
+                default: weight = XFontWeightRegular.rawValue
                 }
 
-                return XFont.systemFont(ofSize: size, weight: weight)
+                return XFont.systemFont(ofSize: size, weight: NSFont.Weight(rawValue: weight!))
             }
         }
         set {

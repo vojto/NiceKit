@@ -97,7 +97,7 @@ public class NiceButton: NSView {
             removeTrackingArea(area)
         }
 
-        trackingArea = NSTrackingArea(rect: bounds, options: [.mouseEnteredAndExited, .activeInKeyWindow], owner: self, userInfo: nil)
+        trackingArea = NSTrackingArea(rect: bounds, options: [NSTrackingArea.Options.mouseEnteredAndExited, NSTrackingArea.Options.activeInKeyWindow], owner: self, userInfo: nil)
         self.addTrackingArea(trackingArea!)
     }
 

@@ -19,7 +19,7 @@ open class NKLabel: NKTextField {
         self.isSelectable = false
         self.isBezeled = false
         self.lineBreakMode = .byWordWrapping
-        self.setContentCompressionResistancePriority(250, for: .horizontal)
+        self.setContentCompressionResistancePriority(NSLayoutConstraint.Priority(rawValue: 250), for: .horizontal)
     }
 
     required public init?(coder: NSCoder) {

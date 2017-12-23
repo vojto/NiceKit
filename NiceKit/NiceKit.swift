@@ -27,7 +27,7 @@ public struct NiceKit {
         #if os(iOS)
         XApplication.sharedApplication().openURL(url)
         #else
-        NSWorkspace.shared().open(url)
+        NSWorkspace.shared.open(url)
         #endif
     }
 }

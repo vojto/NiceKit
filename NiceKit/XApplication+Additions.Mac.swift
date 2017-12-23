@@ -23,17 +23,17 @@ public extension XApplication {
     @discardableResult class func setDockIconVisible(_ state: Bool) -> Bool {
         var result: Bool
         if state {
-            result = NSApp.setActivationPolicy(NSApplicationActivationPolicy.regular)
+            result = NSApp.setActivationPolicy(NSApplication.ActivationPolicy.regular)
         } else {
-            result = NSApp.setActivationPolicy(NSApplicationActivationPolicy.accessory)
+            result = NSApp.setActivationPolicy(NSApplication.ActivationPolicy.accessory)
         }
         
-        NSApp.presentationOptions = NSApplicationPresentationOptions()
+        NSApp.presentationOptions = NSApplication.PresentationOptions()
         
         NSMenu.setMenuBarVisible(false)
         NSMenu.setMenuBarVisible(true)
         
-        NSApplication.shared().activate(ignoringOtherApps: true)
+        NSApplication.shared.activate(ignoringOtherApps: true)
 
         // SWIFT3-TODO
 //        Timer.schedule(delay: 0.1) { _ in
@@ -61,18 +61,18 @@ public extension XApplication {
 
         print("bundle path: \(bundlePath)")
         
-        let workspace = NSWorkspace.shared()
+        let workspace = NSWorkspace.shared
         
         let identifier = "rinik.Escape"
         
         if let url = workspace.urlForApplication(withBundleIdentifier: identifier) {
-            var config = [String: AnyObject]()
-            config[NSWorkspaceLaunchConfigurationArguments] = ["quiet", "test"] as NSArray
-            config[NSWorkspaceLaunchConfigurationEnvironment] = ["quiet": "true"] as NSDictionary
+            var config = [NSWorkspace.LaunchConfigurationKey: AnyObject]()
+            config[.arguments] = ["quiet", "test"] as NSArray
+            config[.environment] = ["quiet": "true"] as NSDictionary
             
 
             do {
-                try workspace.launchApplication(at: url, options: [.default], configuration: config)
+                try workspace.launchApplication(at: url, options: [NSWorkspace.LaunchOptions.default], configuration: config)
             } catch _ {
                 Swift.print("Failed launching app with config: \(config)")
             }

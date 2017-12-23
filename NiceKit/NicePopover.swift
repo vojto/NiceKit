@@ -33,7 +33,7 @@ public class NicePopover: NSWindow {
 
     public convenience init() {
         let rect = NSRect(x: 100, y: 100, width: 200, height: 100)
-        let styleMask: NSWindow.StyleMask = [.fullSizeContentView, .borderless]
+        let styleMask: NSWindow.StyleMask = [NSWindow.StyleMask.fullSizeContentView, NSWindow.StyleMask.borderless]
 
         self.init(contentRect: rect, styleMask: styleMask, backing: .buffered, defer: false)
 
@@ -49,12 +49,12 @@ public class NicePopover: NSWindow {
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(handleUpdateFrame(_:)),
-            name: NSNotification.Name.NSViewFrameDidChange,
+            name: NSView.frameDidChangeNotification,
             object: contentView
         )
     }
 
-    func handleUpdateFrame(_ notification: Notification) {
+    @objc func handleUpdateFrame(_ notification: Notification) {
         self.updateOrigin()
     }
 

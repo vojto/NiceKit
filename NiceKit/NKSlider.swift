@@ -27,7 +27,7 @@ open class NKSlider: XSlider {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func handleSlide() {
+    @objc func handleSlide() {
         onChange?()
     }
 

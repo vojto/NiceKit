@@ -31,8 +31,8 @@ public extension XView {
             samplesPerPixel: 4,
             hasAlpha: true,
             isPlanar: false,
-            colorSpaceName: NSCalibratedRGBColorSpace,
-            bitmapFormat: .alphaFirst,
+            colorSpaceName: NSColorSpaceName.calibratedRGB,
+            bitmapFormat: NSBitmapImageRep.Format.alphaFirst,
             bytesPerRow: 4 * Int(backingSize.width),
             bitsPerPixel: 32)!
 
@@ -40,7 +40,7 @@ public extension XView {
 
         let context = NSGraphicsContext(bitmapImageRep: rep)!
 
-        NSGraphicsContext.setCurrent(context)
+        NSGraphicsContext.current = context
         (context.cgContext).scaleBy(x: scale, y: scale)
 
         self.displayIgnoringOpacity(frame, in: context)

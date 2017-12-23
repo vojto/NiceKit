@@ -13,16 +13,16 @@ import AppKit
 
 public extension NSMutableAttributedString {
     func addAttribute(_ name: String, value: Any) {
-        self.addAttribute(name, value: value, range: NSMakeRange(0, self.length))
+        self.addAttribute(NSAttributedStringKey(rawValue: name), value: value, range: NSMakeRange(0, self.length))
     }
     
     func attributeValue(_ name: String) -> Any? {
         var range = NSMakeRange(0, self.length)
-        return self.attribute(name, at: 0, effectiveRange: &range) as Any?
+        return self.attribute(NSAttributedStringKey(rawValue: name), at: 0, effectiveRange: &range) as Any?
     }
     
     func removeAttribute(_ name: String) {
-        self.removeAttribute(name, range: NSMakeRange(0, self.length))
+        self.removeAttribute(NSAttributedStringKey(rawValue: name), range: NSMakeRange(0, self.length))
     }
     
     func replaceAttribute(_ name: String, newValue: Any?) {
@@ -36,10 +36,13 @@ public extension NSMutableAttributedString {
         let range = NSMakeRange(0, self.length)
         var attrs = [String: Any]()
         
+        fatalError("broken")
+        
         self.enumerateAttributes(in: range, options: NSAttributedString.EnumerationOptions()) { (dct, range, wtf) in
-            for (key, value) in dct {
-                attrs[key] = value
-            }
+            
+//            for (key, value) in dct {
+//                attrs[key] = value
+//            }
         }
         
         return attrs
@@ -47,36 +50,36 @@ public extension NSMutableAttributedString {
     
     public var textColor: XColor? {
         get {
-            return self.attributeValue(XForegroundColorAttributeName) as? NSColor
+            return self.attributeValue(XForegroundColorAttributeName.rawValue) as? NSColor
         }
         set {
-            self.replaceAttribute(XForegroundColorAttributeName, newValue: newValue)
+            self.replaceAttribute(XForegroundColorAttributeName.rawValue, newValue: newValue)
         }
     }
     
     public var font: XFont? {
         get {
-            return self.attributeValue(XFontAttributeName) as? XFont
+            return self.attributeValue(XFontAttributeName.rawValue) as? XFont
         }
         set {
-            self.replaceAttribute(XFontAttributeName, newValue: newValue)
+            self.replaceAttribute(XFontAttributeName.rawValue, newValue: newValue)
         }
     }
     
     public var strikethroughStyle: Int? {
         get {
-            return self.attributeValue(XStrikethroughStyleAttributeName) as? Int
+            return self.attributeValue(XStrikethroughStyleAttributeName.rawValue) as? Int
         }
         set {
-            self.replaceAttribute(XStrikethroughStyleAttributeName, newValue: newValue as Any?)
+            self.replaceAttribute(XStrikethroughStyleAttributeName.rawValue, newValue: newValue as Any?)
         }
     }
 
     #if os(OSX)
     public var style: NSParagraphStyle? {
-        get { return self.attributeValue(NSParagraphStyleAttributeName) as? NSParagraphStyle }
+        get { return self.attributeValue(NSAttributedStringKey.paragraphStyle.rawValue) as? NSParagraphStyle }
         set {
-            self.replaceAttribute(NSParagraphStyleAttributeName, newValue: newValue)
+            self.replaceAttribute(NSAttributedStringKey.paragraphStyle.rawValue, newValue: newValue)
         }
     }
     #endif

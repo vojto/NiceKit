@@ -18,7 +18,7 @@ public class NiceMenuTableView: NSTableView {
             removeTrackingArea(area)
         }
 
-        trackingArea = NSTrackingArea(rect: bounds, options: [.mouseMoved, .mouseEnteredAndExited, .activeAlways], owner: self, userInfo: nil)
+        trackingArea = NSTrackingArea(rect: bounds, options: [NSTrackingArea.Options.mouseMoved, NSTrackingArea.Options.mouseEnteredAndExited, NSTrackingArea.Options.activeAlways], owner: self, userInfo: nil)
         self.addTrackingArea(trackingArea!)
     }
 

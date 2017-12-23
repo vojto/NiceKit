@@ -58,7 +58,7 @@ public class NKTableBuilder: NSObject, NSTableViewDataSource, NSTableViewDelegat
     public var onSelectRow: ((_ index: Int) -> ())?
     public var onDeselectRow: (() -> ())?
     public var selectedView: NKTableCellView?
-    dynamic var _selectionIndexes: NSIndexSet?
+    @objc dynamic var _selectionIndexes: NSIndexSet?
 
     // Events
     public var onTap: (() -> ())?                      // iOS only - doesn't do anything here
@@ -96,8 +96,8 @@ public class NKTableBuilder: NSObject, NSTableViewDataSource, NSTableViewDelegat
         
         super.init()
 
-        let column = NSTableColumn(identifier: "column")
-        column.resizingMask = .autoresizingMask
+        let column = NSTableColumn(identifier: NSUserInterfaceItemIdentifier(rawValue: "column"))
+        column.resizingMask = NSTableColumn.ResizingOptions.autoresizingMask
         tableView.addTableColumn(column)
 
         tableView.selectionHighlightStyle = .none
@@ -110,7 +110,7 @@ public class NKTableBuilder: NSObject, NSTableViewDataSource, NSTableViewDelegat
         tableView.headerView = nil
         scrollView.documentView = tableView
 
-        tableView.bind("selectionIndexes", to: self, withKeyPath: "_selectionIndexes", options: nil)
+        tableView.bind(NSBindingName(rawValue: "selectionIndexes"), to: self, withKeyPath: "_selectionIndexes", options: nil)
         self.addObserver(self, forKeyPath: "_selectionIndexes", options: .new, context: nil)
     }
 
@@ -160,7 +160,7 @@ public class NKTableBuilder: NSObject, NSTableViewDataSource, NSTableViewDelegat
 
     func applyEnableReordering(enable: Bool) {
         if enable {
-            tableView.register(forDraggedTypes: ["public.data"])
+            tableView.registerForDraggedTypes([NSPasteboard.PasteboardType(rawValue: "public.data")])
         } else {
             tableView.unregisterDraggedTypes()
         }
@@ -194,7 +194,7 @@ public class NKTableBuilder: NSObject, NSTableViewDataSource, NSTableViewDelegat
         let item = self.itemAt(row: row)
 
         let identifier = String(describing: item.viewClass)
-        var view = tableView.make(withIdentifier: identifier, owner: self) as! NKTableCellView?
+        var view = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: identifier), owner: self) as! NKTableCellView?
 
         if view == nil {
 //            Log.t("Initializing viewg mit identifier: \(identifier)")
@@ -456,7 +456,7 @@ public class NKTableBuilder: NSObject, NSTableViewDataSource, NSTableViewDelegat
     }
     
     public func recalculateHeights(indexes: NSIndexSet) {
-        let context = NSAnimationContext.current()
+        let context = NSAnimationContext.current
         
         NSAnimationContext.beginGrouping()
         context.duration = 0
@@ -481,7 +481,7 @@ public class NKTableBuilder: NSObject, NSTableViewDataSource, NSTableViewDelegat
         
         if canMove {
             let item = NSPasteboardItem()
-            item.setString(String(row), forType: "public.data")
+            item.setString(String(row), forType: NSPasteboard.PasteboardType(rawValue: "public.data"))
             return item
         } else {
             return nil
@@ -489,10 +489,10 @@ public class NKTableBuilder: NSObject, NSTableViewDataSource, NSTableViewDelegat
         
     }
     
-    public func tableView(_ tableView: NSTableView, validateDrop info: NSDraggingInfo, proposedRow row: Int, proposedDropOperation dropOperation: NSTableViewDropOperation) -> NSDragOperation {
+    public func tableView(_ tableView: NSTableView, validateDrop info: NSDraggingInfo, proposedRow row: Int, proposedDropOperation dropOperation: NSTableView.DropOperation) -> NSDragOperation {
         var canMove = true
 
-        if let contents = info.draggingPasteboard().string(forType: "public.data") {
+        if let contents = info.draggingPasteboard().string(forType: NSPasteboard.PasteboardType(rawValue: "public.data")) {
             let index = Int(contents)
         
             if let fun = self.canDropItem {
@@ -510,12 +510,18 @@ public class NKTableBuilder: NSObject, NSTableViewDataSource, NSTableViewDelegat
         return []
     }
     
-    public func tableView(_ tableView: NSTableView, acceptDrop info: NSDraggingInfo, row: Int, dropOperation: NSTableViewDropOperation) -> Bool {
+    public func tableView(_ tableView: NSTableView, acceptDrop info: NSDraggingInfo, row: Int, dropOperation: NSTableView.DropOperation) -> Bool {
+        
+        fatalError("this is broken")
+        
         var oldIndexes = [Int]()
-        info.enumerateDraggingItems(options: .concurrent, for: tableView, classes: [NSPasteboardItem.self], searchOptions: [:]) {
-            if let index = Int(($0.0.item as! NSPasteboardItem).string(forType: "public.data")!) {
-                oldIndexes.append(index)
-            }
+        
+        info.enumerateDraggingItems(options: .concurrent, for: tableView, classes: [NSPasteboardItem.self], searchOptions: [:]) { arg1, arg2, arg3 in
+            
+//            if let index = Int(arg1.0.item as! NSPasteboardItem).string(forType: "public.data")!) {
+//
+//                oldIndexes.append(index)
+//            }
         }
         
         var oldIndexOffset = 0

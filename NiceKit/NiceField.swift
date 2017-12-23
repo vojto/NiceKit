@@ -64,7 +64,7 @@ open class NiceField: NSView, NSTextFieldDelegate {
         //        field.drawsBackground = false
         field.stringValue = "wtf"
         field.focusRingType = .none
-        field.setContentCompressionResistancePriority(.greatestFiniteMagnitude, for: .horizontal)
+        field.setContentCompressionResistancePriority(.required, for: .horizontal)
 
         field.delegate = self
 
@@ -89,7 +89,7 @@ open class NiceField: NSView, NSTextFieldDelegate {
             removeTrackingArea(area)
         }
 
-        trackingArea = NSTrackingArea(rect: bounds, options: [.mouseEnteredAndExited, .activeInKeyWindow], owner: self, userInfo: nil)
+        trackingArea = NSTrackingArea(rect: bounds, options: [NSTrackingArea.Options.mouseEnteredAndExited, NSTrackingArea.Options.activeInKeyWindow], owner: self, userInfo: nil)
         self.addTrackingArea(trackingArea!)
     }
 

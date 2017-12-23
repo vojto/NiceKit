@@ -38,7 +38,7 @@ open class NKSegmentedControl: NSSegmentedControl {
         self.action = #selector(handleChange)
     }
     
-    func handleChange() {
+    @objc func handleChange() {
         self.onChange?(selectedSegment)
     }
     

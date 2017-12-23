@@ -49,7 +49,7 @@ open class NKPopUpButton: NSPopUpButton {
         self.action = #selector(handleChange)
     }
     
-    func handleChange() {
+    @objc func handleChange() {
         Swift.print("Handling change in NKPopupButton")
         
         self.onChange?(indexOfSelectedItem)

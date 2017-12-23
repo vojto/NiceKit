@@ -18,7 +18,7 @@ import CoreGraphics
 public extension XImage {
     #if os(OSX)
     var CGImage: CGImage? {
-        let ctx = NSGraphicsContext.current()
+        let ctx = NSGraphicsContext.current
         var rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         return self.cgImage(forProposedRect: &rect, context: ctx, hints: nil)
     }
@@ -80,7 +80,7 @@ public extension XImage {
         
         copiedImage.lockFocus()
         color.set()
-        NSRectFillUsingOperation(imageBounds, .sourceAtop)
+        imageBounds.fill(using: .sourceAtop)
         copiedImage.unlockFocus()
         
         return copiedImage

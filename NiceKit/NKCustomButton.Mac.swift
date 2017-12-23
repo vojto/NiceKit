@@ -71,7 +71,7 @@ open class NKCustomButton: NKView {
 
     open override func applyStyle() {
         if let image = style.image {
-            self.image = NSImage(named: image)
+            self.image = NSImage(named: NSImage.Name(rawValue: image))
         }
 
         super.applyStyle()

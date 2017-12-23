@@ -16,10 +16,10 @@ open class NKCheckbox: NSButton {
     
     open var checked: Bool {
         get {
-            return state == NSOnState
+            return state == NSControl.StateValue.on
         }
         set {
-            self.state = newValue ? NSOnState : NSOffState
+            self.state = newValue ? NSControl.StateValue.on : NSControl.StateValue.off
         }
     }
     
@@ -36,7 +36,7 @@ open class NKCheckbox: NSButton {
     override open func mouseDown(with event: NSEvent) {
         super.mouseDown(with: event)
         
-        let checked = (self.state == NSOnState)
+        let checked = (self.state == NSControl.StateValue.on)
         onChange?(checked, event)
     }
     

@@ -131,42 +131,42 @@ public enum StackDirection {
     case row
 }
 
-public extension LayoutProxy {
-    public func start(_ direction: StackDirection) -> Edge {
-        switch direction {
-        case .column:
-            return left
-        case .row:
-            return top
-        }
-    }
-    
-    public func end(_ direction: StackDirection) -> Edge {
-        switch direction {
-        case .column:
-            return right
-        case .row:
-            return bottom
-        }
-    }
-    
-    public func edge(type: EdgeType) -> Edge {
-        switch type {
-        case .top:
-            return top
-        case .bottom:
-            return bottom
-        case .left:
-            return left
-        case .right:
-            return right
-        case .centerX:
-            return centerX
-        case .centerY:
-            return centerY
-        }
-    }
-}
+//public extension LayoutProxy {
+//    public func start(_ direction: StackDirection) -> Edge {
+//        switch direction {
+//        case .column:
+//            return left
+//        case .row:
+//            return top
+//        }
+//    }
+//
+//    public func end(_ direction: StackDirection) -> Edge {
+//        switch direction {
+//        case .column:
+//            return right
+//        case .row:
+//            return bottom
+//        }
+//    }
+//
+//    public func edge(type: EdgeType) -> Edge {
+//        switch type {
+//        case .top:
+//            return top
+//        case .bottom:
+//            return bottom
+//        case .left:
+//            return left
+//        case .right:
+//            return right
+//        case .centerX:
+//            return centerX
+//        case .centerY:
+//            return centerY
+//        }
+//    }
+//}
 
 public func alignEdges(_ direction: StackDirection, _ align: StackAlign) -> [EdgeType] {
     switch direction {
@@ -214,38 +214,38 @@ public enum StackAlign {
 }
 
 public extension Array where Element:NSView {
-    public func stack(_ dir: StackDirection, margin: CGFloat = 0, align: StackAlign = .center) -> NSView {
-        let container = NSView()
-        
-        for view in self {
-            container.addSubview(view)
-        }
-        
-        // Align all children
-        for view in self {
-            constrain(view) { view in
-                for edgeType in alignEdges(dir, align) {
-                    view.edge(type: edgeType) == view.superview!.edge(type: edgeType)
-                }
-            }
-        }
-        
-        constrain(self.first!) { view in
-            view.start(dir) == view.superview!.start(dir)
-        }
-        
-        for i in 1..<self.count {
-            constrain(self[i], self[i-1]) { current, previous in
-                current.start(dir) == previous.end(dir) + margin
-            }
-        }
-        
-        constrain(self.last!) { view in
-            view.end(dir) == view.superview!.end(dir) ~ 250
-        }
-        
-        return container
-    }
+//    public func stack(_ dir: StackDirection, margin: CGFloat = 0, align: StackAlign = .center) -> NSView {
+//        let container = NSView()
+//
+//        for view in self {
+//            container.addSubview(view)
+//        }
+//
+//        // Align all children
+//        for view in self {
+//            constrain(view) { view in
+//                for edgeType in alignEdges(dir, align) {
+//                    view.edge(type: edgeType) == view.superview!.edge(type: edgeType)
+//                }
+//            }
+//        }
+//
+//        constrain(self.first!) { view in
+//            view.start(dir) == view.superview!.start(dir)
+//        }
+//
+//        for i in 1..<self.count {
+//            constrain(self[i], self[i-1]) { current, previous in
+//                current.start(dir) == previous.end(dir) + margin
+//            }
+//        }
+//
+//        constrain(self.last!) { view in
+//            view.end(dir) == view.superview!.end(dir) ~ 250
+//        }
+//
+//        return container
+//    }
     
     public func equalWidths() {
         for i in 1...(self.count - 1) {
@@ -286,7 +286,7 @@ public extension NSView {
         return view
     }
     
-    @discardableResult public func include(_ view: NSView, insets ins: EdgeInsets) -> NSView {
+    @discardableResult public func include(_ view: NSView, insets ins: NSEdgeInsets) -> NSView {
         addSubview(view)
         
         constrain(view) { view in
@@ -312,12 +312,12 @@ public extension NSView {
         return self
     }
     
-    @discardableResult public func expand(_ dir: StackDirection) -> NSView {
-        constrain(self) { view in
-            view.start(dir) == view.superview!.start(dir)
-            view.end(dir) == view.superview!.end(dir)
-        }
-        
-        return self
-    }
+//    @discardableResult public func expand(_ dir: StackDirection) -> NSView {
+//        constrain(self) { view in
+//            view.start(dir) == view.superview!.start(dir)
+//            view.end(dir) == view.superview!.end(dir)
+//        }
+//        
+//        return self
+//    }
 }

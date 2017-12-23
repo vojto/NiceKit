@@ -25,7 +25,7 @@ open class NKSound: Equatable {
         fileName = named
 
         #if os(OSX)
-            sound = NSSound(named: named)
+            sound = NSSound(named: NSSound.Name(rawValue: named))
         #else
             do {
                 try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)

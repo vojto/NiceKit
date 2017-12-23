@@ -83,26 +83,26 @@
     public typealias XImageView = NSImageView
 //    public typealias XSwitch = ITSwitch
 
-    public let XFontWeightUltraLight = NSFontWeightUltraLight
-    public let XFontWeightThin = NSFontWeightThin
-    public let XFontWeightLight = NSFontWeightLight
-    public let XFontWeightRegular = NSFontWeightRegular
-    public let XFontWeightMedium = NSFontWeightMedium
-    public let XFontWeightSemibold = NSFontWeightSemibold
-    public let XFontWeightBold = NSFontWeightBold
-    public let XFontWeightHeavy = NSFontWeightHeavy
-    public let XFontWeightBlack = NSFontWeightBlack
+    public let XFontWeightUltraLight = NSFont.Weight.ultraLight
+    public let XFontWeightThin = NSFont.Weight.thin
+    public let XFontWeightLight = NSFont.Weight.light
+    public let XFontWeightRegular = NSFont.Weight.regular
+    public let XFontWeightMedium = NSFont.Weight.medium
+    public let XFontWeightSemibold = NSFont.Weight.semibold
+    public let XFontWeightBold = NSFont.Weight.bold
+    public let XFontWeightHeavy = NSFont.Weight.heavy
+    public let XFontWeightBlack = NSFont.Weight.black
 
-    public let XFontFeatureSettingsAttribute = NSFontFeatureSettingsAttribute
-    public let XFontFeatureTypeIdentifierKey = NSFontFeatureTypeIdentifierKey
-    public let XFontFeatureSelectorIdentifierKey = NSFontFeatureSelectorIdentifierKey
+    public let XFontFeatureSettingsAttribute = NSFontDescriptor.AttributeName.featureSettings
+    public let XFontFeatureTypeIdentifierKey = NSFontDescriptor.FeatureKey.typeIdentifier
+    public let XFontFeatureSelectorIdentifierKey = NSFontDescriptor.FeatureKey.selectorIdentifier
 
-    public typealias XEdgeInsets = EdgeInsets
+    public typealias XEdgeInsets = NSEdgeInsets
     public let XEdgeInsetsMake = NSEdgeInsetsMake
     public let XEdgeInsetsZero = XEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
 
     public func XGraphicsGetCurrentContext() -> CGContext {
-        return NSGraphicsContext.current()!.cgContext
+        return NSGraphicsContext.current!.cgContext
     }
 
     public enum XStatusBarStyle {
@@ -117,9 +117,9 @@
 #endif
 
 
-public let XForegroundColorAttributeName = NSForegroundColorAttributeName
-public let XFontAttributeName = NSFontAttributeName
-public let XStrikethroughStyleAttributeName = NSStrikethroughStyleAttributeName
+public let XForegroundColorAttributeName = NSAttributedStringKey.foregroundColor
+public let XFontAttributeName = NSAttributedStringKey.font
+public let XStrikethroughStyleAttributeName = NSAttributedStringKey.strikethroughStyle
 
 
 

@@ -131,7 +131,7 @@ open class NKView: XView, NKViewable {
             self.removeTrackingArea(area)
         }
         if self.shouldTrackMouseEnterExit {
-            self.mouseTrackingArea = NSTrackingArea(rect: self.bounds, options: [.activeAlways, .mouseEnteredAndExited], owner: self, userInfo: nil)
+            self.mouseTrackingArea = NSTrackingArea(rect: self.bounds, options: [NSTrackingArea.Options.activeAlways, NSTrackingArea.Options.mouseEnteredAndExited], owner: self, userInfo: nil)
 
             self.addTrackingArea(self.mouseTrackingArea!)
         }
@@ -200,8 +200,9 @@ open class NKView: XView, NKViewable {
 }
 
 
-func alignVertically(_ items: [LayoutProxy], margin: CGFloat) {
-    for i in 1 ..< items.count {
-        items[i].top == items[i-1].bottom + margin
-    }
-}
+//func alignVertically(_ items: [LayoutProxy], margin: CGFloat) {
+//    for i in 1 ..< items.count {
+//        items[i].top == items[i-1].bottom + margin
+//    }
+//}
+

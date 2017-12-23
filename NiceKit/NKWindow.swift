@@ -20,7 +20,7 @@ extension NSWindow {
         }
         
     
-        let window = NKSheetWindow(contentRect: CGRect(x: 0, y: 0, width: size.width, height: size.height), styleMask: NSWindowStyleMask.titled, backing: .buffered, defer: false)
+        let window = NKSheetWindow(contentRect: CGRect(x: 0, y: 0, width: size.width, height: size.height), styleMask: NSWindow.StyleMask.titled, backing: .buffered, defer: false)
 
         
         window.contentView = view
@@ -35,7 +35,7 @@ extension NSWindow {
             return
         }
         
-        let window = NKSheetWindow(contentRect: CGRect(x: 0, y: 0, width: size.width, height: size.height), styleMask: NSWindowStyleMask.titled, backing: .buffered, defer: false)
+        let window = NKSheetWindow(contentRect: CGRect(x: 0, y: 0, width: size.width, height: size.height), styleMask: NSWindow.StyleMask.titled, backing: .buffered, defer: false)
         
         window.contentViewController = viewController
         

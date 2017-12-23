@@ -23,7 +23,7 @@ public extension String {
     func calculateWidth(font: NSFont) -> CGFloat {
         let attr = NSMutableAttributedString(string: self)
         attr.font = font
-        let size = attr.boundingRect(with: CGSize(width: 99999, height: 50), options: .usesLineFragmentOrigin)
+        let size = attr.boundingRect(with: CGSize(width: 99999, height: 50), options: NSString.DrawingOptions.usesLineFragmentOrigin)
         return size.width
     }
 }
@@ -36,7 +36,7 @@ extension NSAttributedString {
         let bounds = CGSize(width: width, height: 10000)
 
         #if os(OSX)
-        let size = attributedString.boundingRect(with: bounds, options: .usesLineFragmentOrigin)
+        let size = attributedString.boundingRect(with: bounds, options: NSString.DrawingOptions.usesLineFragmentOrigin)
         #else
         let size = attributedString.boundingRectWithSize(bounds, options: [.UsesLineFragmentOrigin, .UsesFontLeading], context: nil)
         #endif

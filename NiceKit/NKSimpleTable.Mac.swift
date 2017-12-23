@@ -48,8 +48,8 @@ open class NKSimpleTable<ItemType, ViewType: NSView>: NSScrollView, NSTableViewD
         tableView.selectionHighlightStyle = .none
         
         
-        let column = NSTableColumn(identifier: "column")
-        column.resizingMask = .autoresizingMask
+        let column = NSTableColumn(identifier: NSUserInterfaceItemIdentifier(rawValue: "column"))
+        column.resizingMask = NSTableColumn.ResizingOptions.autoresizingMask
         tableView.addTableColumn(column)
     }
     
@@ -61,11 +61,11 @@ open class NKSimpleTable<ItemType, ViewType: NSView>: NSScrollView, NSTableViewD
     public func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         let identifier = self.identify?(items[row]) ?? "view"
         
-        var view: ViewType? = tableView.make(withIdentifier: identifier, owner: self) as! ViewType?
+        var view: ViewType? = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: identifier), owner: self) as! ViewType?
         
         if view == nil {
             view = self.build(items[row])
-            view?.identifier = identifier
+            view?.identifier = NSUserInterfaceItemIdentifier(rawValue: identifier)
         }
         
         self.update(view!, items[row], row)

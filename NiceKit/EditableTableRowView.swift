@@ -35,19 +35,19 @@ open class CustomTableRowView: EditableTableRowView {
         
         if isEditing {
             NSColor.white.set()
-            NSRectFill(bounds)
+            bounds.fill()
             
             blue.setStroke()
             path.stroke()
         } else if isSelected {
             NSColor.white.set()
-            NSRectFill(bounds)
+            bounds.fill()
             
             blue.setFill()
             path.fill()
         } else {
             NSColor.white.set()
-            NSRectFill(bounds)
+            bounds.fill()
         }
     }
 }
